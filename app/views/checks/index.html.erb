@@ -1,25 +1,19 @@
 <%= render "shared/header" %>
 
 <div class='main'>
-  <%# 欠席フォーム %>
+  
   <div class='form'>
-    <%#= form_with(model: @check, url:checks_path,local: true) do |f| %>
+    
       
       <div class='messages'>
         <h1 class='good-morning'>
           おはよう！
         </h1>
-        <h2 class='check-content'>
-          わたしは、<br>
-          <%#= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"number-box", id:"number"}) %>
-          番さんは、)<br>
-          学校に来たよ！<br>
-          <%#= f.collection_select(:attendance_id, Attendance.all, :id, :name, {}, {class:"attendance-box", id:"attendance"}) %>
-        </h2>
+        
       </div>
 
       <div class='form-button'>
-        <%#= f.submit "とうろくボタン" ,class:"sell-btn" %>
+        <%= link_to '出欠かくにんへ','リンクURL',class:"sell-btn" %>
       </div>
     <%# end %>
   </div>
