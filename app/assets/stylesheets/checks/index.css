@@ -1,0 +1,49 @@
+
+
+
+.main{
+  height: 530px;
+  width: 1500px;  
+  background-color: yellow;
+  position: relative;
+}
+
+.form{
+  position: absolute;
+  left: 200px;
+  height: 500px;
+  width: 500px;
+  text-align:center;
+  
+}
+
+.number-box{
+  font-size: 40px;
+}
+
+.comment{
+  position: absolute;
+  right:200px;
+  font-size: 50px;
+  background-color: orange;
+}
+
+.good-morning{
+  text-align: left;
+  font-size: 60px;
+  
+}
+
+.check-content{
+  font-size: 40px;
+  text-align:center;
+}
+
+.attendance-box{
+  font-size: 40px;
+}
+
+.sell-btn{
+  font-size: 30px;
+}
+
