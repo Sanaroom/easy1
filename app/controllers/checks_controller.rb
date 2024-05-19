@@ -5,16 +5,16 @@ class ChecksController < ApplicationController
 
   def new
     @check=Check.new
-    @default_text = "学校に来たよ！（出席）"
+    @default_text = "学校に来たよ！（●）"
   end
 
   def create
-    Check.create(check_params)
+    @check=Check.create(check_params)
     redirect_to '/'
   end
 
   def show
-    @check = Check.find(params[:id])
+    @checks=Check.all
   end
 
 

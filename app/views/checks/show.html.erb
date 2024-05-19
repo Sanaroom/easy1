@@ -1,3 +1,19 @@
-aa
 
-      
+<table>
+  <thead>
+    <tr>
+      <th>Column1</th>
+      <th>Column2</th>
+      <!-- 必要な列を追加 -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @checks.each do |check| %>
+      <tr>
+        <td><%= check.number %></td>
+        <td><%= check.attendance %></td>
+        <!-- 必要な列を追加 -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

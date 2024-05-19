@@ -10,7 +10,7 @@
           (<%= f.text_area :number, class:"check-number", id:"check-number", placeholder:"番号" %>
           番さんは、)<br><br>
          
-          <%= f.text_area :attendance, value: @default_text, class:"check-attendance", id:"check-attendance", placeholder:"欠席" %>
+          <%= f.text_area :attendance, value: @default_text, readonly: true, class:"check-attendance", id:"check-attendance", placeholder:"欠席" %>
         </h1>
 
         <div class="check_button">
