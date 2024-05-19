@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+  
+  <div class='form'>
+    
+      
+      <div class='messages'>
+        <h1 class='good-morning'>
+          おはよう！
+        </h1>
+        
+      </div>
+
+      <div class='form-button'>
+        <%= link_to '出欠かくにんへ',new_check_path, class:"sell-btn" %>
+      </div>
+    <%# end %>
+  </div>
+
+  <%# 先生からのコメントの表示 %>
+  <div class='comment'>
+    先生からのお知らせ
+    <%#= link_to comment_path(comment) do %>
+  </div>
+
+</div>

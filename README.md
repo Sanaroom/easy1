@@ -9,17 +9,6 @@ Association
   belongs_to:user
   belongs_to:comment
 
-## sheets テーブル
-| Column           | Type      | Options     |
-| ---------------- | --------- | ----------- |
-| number           | references| null: false, foreign_key: true |
-| attendance       | references| null: false, foreign_key: true |
-| homework         | integer   | null: false |
-
-Association
-  belongs_to:check
-  belongs_to:user
-  belongs_to:comment
 
 ## users テーブル
 | Column              | Type      | Options     |
@@ -39,6 +28,7 @@ Association
 | Column    | Type       | Options     |
 | --------- | ---------- | ----------- |
 | comment   | text       | null: false |
+
 | event     | integer    | null: false |
 | user      | references | null: false, foreign_key: true |
 

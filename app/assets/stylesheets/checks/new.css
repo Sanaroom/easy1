@@ -1,0 +1,16 @@
+
+.new-messages{
+  width: 1500px;
+  height: 530px;
+  background-color: yellow;
+}
+
+.message1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.check-btn{
+  margin-left: 1000px;
+  font-size: 30px;
+}

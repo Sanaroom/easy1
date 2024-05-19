@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+/*全体*/
+.check-top-page{
+  height: 150px;
+  width: 1500px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: greenyellow;
+}
+
+/*左側*/
+.easy-bar-content{
+  margin-left: 20px;
+}
+
+/*学校アイコン*/
+.school-icon{
+  width: 8vw;
+  margin-right: 5vw;
+  
+}
+
+/*右側（リスト側）*/
+.nav {
+  margin-right: 20px;
+  
+}
+
+/*リスト内*/
+.list-nav{
+  display: flex;
+  min-width: 200px;
+}
+
+/*先生内*/
+.sensei{
+  display:flex;
+  flex-flow: column;
+  margin-right: 10px;
+}
+/*先生アイコン*/
+.sensei-icon{
+  width: 5vw;
+}
+
+/*子ども内*/
+.child{
+  display:flex;
+  flex-flow: column;
+}
+/*子どもアイコン*/
+.child-icon{
+  width: 5vw;
+}
+
+
+
