@@ -2,19 +2,23 @@
 <div class='new-main'>
   <%# 欠席フォーム %>
   <div class='new-form'>
-    <%#= form_with(model: @check, url:checks_path,local: true) do |f| %>
+    <%= form_with model: @check, url:checks_path,local: true do |f| %>
       
       <div class='new-messages'>
         <h1 class='message1'>
-          わたしは、<br>
-          (<%#= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"number-box", id:"number"}) %>
-          番さんは、)<br>
-          学校に来たよ！<br>
-          <%#= f.collection_select(:attendance_id, Attendance.all, :id, :name, {}, {class:"attendance-box", id:"attendance"}) %>
+          わたしは、<br><br>
+          (<%= f.text_area :number, class:"check-number", id:"check-number", placeholder:"番号" %>
+          番さんは、)<br><br>
+         
+          <%= f.text_area :attendance, value: @default_text, class:"check-attendance", id:"check-attendance", placeholder:"欠席" %>
         </h1>
+
+        <div class="check_button">
+          <%= f.submit "とうろくボタン" ,class:"check-btn" %>      
+        </div>
         
       </div>
 
-    <%#end%>
+    <%end%>
   </div>
 </div>
