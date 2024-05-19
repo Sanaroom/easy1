@@ -13,6 +13,10 @@ class ChecksController < ApplicationController
     redirect_to '/'
   end
 
+  def show
+    @check = Check.find(params[:id])
+  end
+
 
   private
   def check_params
