@@ -19,9 +19,12 @@
   </div>
 
   <%# 先生からのコメントの表示 %>
-  <div class='comment'>
-    先生からのお知らせ
-    <%#= link_to comment_path(comment) do %>
+  <div class='check-comment'>
+    ＜先生からのお知らせ＞
+    <% @comments.each do |comment| %>
+      <p><%= comment.board %></p>
+    <% end %>
   </div>
+  <%# 先生からのコメントの表示 %>
 
 </div>

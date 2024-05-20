@@ -4,4 +4,6 @@ class Check < ApplicationRecord
     validates :attendance
   end
 
+ 
+
 end

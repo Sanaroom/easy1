@@ -1,8 +1,42 @@
+.comment-messages{
+  width: 1500px;
+  height: 250px;
+  background-color: yellow;
+}
+
+.comment1{
+  text-align: center;
+  
+}
+
+.board-text{
+  font-size: 60px;
+  margin-top: 40px;
+}
+
+
 .board-btn{
   font-size: 40px;
   margin-left: 1000px;
 }
 
-.board-text{
-  font-size: 60px;
+.comment-show{
+  width: 1500px;
+  height: 500px;
+  background-color: lightblue;
+  
 }
+
+.comment-title{
+  font-size: 50px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.show-table{
+  font-size: 20px;
+  margin: 0 auto;
+  border: 1px solid black;
+  
+}
+

@@ -1,8 +1,9 @@
 <%= render "shared/header" %>
 
+  <%#コメント記入欄%>
     <%= form_with model: @comment, url:comments_path,local: true do |f| %>
-      <div class='new-messages'>
-        <h1 class='message1'>
+      <div class='comment-messages'>
+        <h1 class='comment1'>
           <%= f.text_area :board, placeholder: "コメントする", class:"board-text", id:"board-text" %>
         </h1>
 
@@ -12,3 +13,35 @@
         
       </div>
     <%end%>
+
+  <%#コメント表示欄%>
+    
+  
+
+<div class="comment-show">
+  <div class="comment-title">
+        ＜コメント一覧＞<br>
+        ----------------------------------------
+  </div>
+  
+<table class="show-table">
+  <thead>
+    <tr>
+      <th>コメント</th>
+      <th>日時</th>
+      <!-- 必要な列を追加 -->
+    </tr>
+  </thead>
+  
+  
+  <tbody>    
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.board %></td>
+        <td><%= comment.created_at %></td>
+    <% end %>
+  </tbody>
+  
+
+</table>
+</div>

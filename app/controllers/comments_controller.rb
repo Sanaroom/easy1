@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
+
   def index
-    @comments=Comment.all
+    @comments=Comment.order('created_at DESC')
     @comment=Comment.new
+    
   end
 
   
@@ -10,12 +12,14 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      redirect_to root_path
+      redirect_to comments_path, notice: "コメントが投稿されました"
     else
-      
+      @comments = Comment.all
       render :index
     end
   end
+
+  
 
   private
 

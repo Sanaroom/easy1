@@ -47,3 +47,14 @@
   font-size: 30px;
 }
 
+.check-comment{
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: 40px;
+  width: 400px;
+  font-size: 30px;
+  border: 1px solid black;
+}
+.check-comment p {
+  margin-top: 10px;
+}

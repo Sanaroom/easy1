@@ -1,6 +1,7 @@
 class ChecksController < ApplicationController
   def index
     @checks=Check.all
+    @comments = Comment.order('created_at DESC')
   end
 
   def new
@@ -15,6 +16,8 @@ class ChecksController < ApplicationController
 
   def show
     @checks=Check.all
+   
+    
   end
 
 
