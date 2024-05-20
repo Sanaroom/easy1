@@ -4,7 +4,7 @@
 
 <style>
     table {
-      width: 350px;
+      width: 400px;
       border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
     }
 
@@ -24,7 +24,7 @@
     <tr>
       <th >番号</th>
       <th>出席確認</th>
-      <!-- 必要な列を追加 -->
+      <th>登校時間</th>
     </tr>
   </thead>
   <tbody>
@@ -32,7 +32,7 @@
       <tr>
         <td><%= check.number %></td>
         <td><%= check.attendance %></td>
-        <!-- 必要な列を追加 -->
+        <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
       </tr>
     <% end %>
   </tbody>
