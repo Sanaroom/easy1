@@ -1,0 +1,24 @@
+.show-main{
+  width: 1500px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(238, 238, 201);
+  margin-top: 30px;
+}
+
+.check-show-table{
+  text-align: left;
+  
+}
+
+
+.show-comment{
+  height: 450px;
+  width: 650px;
+  background-color: orange;
+  font-size: 50px;
+}
+
+.show-comment p {
+  
+}

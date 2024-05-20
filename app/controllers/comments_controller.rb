@@ -1,7 +1,10 @@
 class CommentsController < ApplicationController
+  before_action :set_comment, only: [:edit,:update]
+
   def index
-    @comments=Comment.all
+    @comments=Comment.order('created_at DESC')
     @comment=Comment.new
+    
   end
 
   
@@ -10,17 +13,39 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      redirect_to root_path
+      redirect_to comments_path, notice: "コメントが投稿されました"
     else
-      
+      @comments = Comment.all
       render :index
     end
+  end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    redirect_to comments_path
+  end
+
+  
+
+  def edit
+  end
+
+  def update
+    comment=Comment.find(params[:id])
+    comment.update(comment_params)
+    redirect_to root_path
+    
   end
 
   private
 
   def comment_params
     params.require(:comment).permit(:board)
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
   end
 
 end
