@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  validates :comment,  presence: true
+  validates :board,  presence: true
 
-  belongs_to :check
+  
 end
