@@ -22,6 +22,12 @@ class ChecksController < ApplicationController
     @comments = Comment.order('created_at DESC')
   end
 
+  def destroy
+    check=Check.find(params[:id])
+    check.destroy
+    redirect_to check_path
+  end
+
 
   private
   def check_params

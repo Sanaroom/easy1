@@ -33,6 +33,7 @@
         <td><%= check.number %></td>
         <td><%= check.attendance %></td>
         <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
+        <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
       </tr>
     <% end %>
   </tbody>
