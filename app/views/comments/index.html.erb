@@ -1,2 +1,14 @@
-<h1>Comments#index</h1>
-<p>Find me in app/views/comments/index.html.erb</p>
+<%= render "shared/header" %>
+
+    <%= form_with model: @comment, url:comments_path,local: true do |f| %>
+      <div class='new-messages'>
+        <h1 class='message1'>
+          <%= f.text_area :board, placeholder: "コメントする", class:"board-text", id:"board-text" %>
+        </h1>
+
+        <div class="board_button">
+          <%= f.submit "送信" ,class:"board-btn" %>      
+        </div>
+        
+      </div>
+    <%end%>
