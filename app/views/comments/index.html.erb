@@ -1,20 +1,8 @@
 <%= render "shared/header" %>
 
   <%#コメント記入欄%>
-    <%= form_with model: @comment, url:comments_path,local: true do |f| %>
-      <div class='comment-messages'>
-        <h1 class='comment1'>
-          <%= f.text_area :board, placeholder: "コメントする", class:"board-text", id:"board-text" %>
-        </h1>
-
-        <div class="board_button">
-          <%= f.submit "送信" ,class:"board-btn" %>      
-        </div>
-        
-      </div>
-    <%end%>
-
-  <%#コメント表示欄%>
+    <%= render partial: "form", locals: { comment: @comment } %>
+  <%# 終わり %>
     
   
 
@@ -39,6 +27,7 @@
       <tr>
         <td><%= comment.board %></td>
         <td><%= comment.created_at %></td>
+        <td><%= link_to '編集', edit_comment_path(comment.id) %></td>
         <td> <%= link_to '削除', comment_path(comment.id), data: { turbo_method: :delete } %></td>
     <% end %>
   </tbody>

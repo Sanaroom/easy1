@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :set_comment, only: [:edit,:update]
 
   def index
     @comments=Comment.order('created_at DESC')
@@ -27,10 +28,24 @@ class CommentsController < ApplicationController
 
   
 
+  def edit
+  end
+
+  def update
+    comment=Comment.find(params[:id])
+    comment.update(comment_params)
+    redirect_to root_path
+    
+  end
+
   private
 
   def comment_params
     params.require(:comment).permit(:board)
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
   end
 
 end

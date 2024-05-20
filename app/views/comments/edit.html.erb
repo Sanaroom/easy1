@@ -1,0 +1,14 @@
+<%#コメント記入欄%>
+   <%= form_with(model: @comment, url:comment_path(@comment), local: true,method: :patch) do |f| %>
+      <div class='comment-messages'>
+        <h1 class='comment1'>
+          <%= f.text_area :board,  placeholder: "コメントする", class:"board-text", id:"board-text" %>
+        </h1>
+
+        <div class="board_button">
+          <%= f.submit "更新する" ,class:"board-btn" %>      
+        </div>
+        
+      </div>
+    <%end%>
+  <%# 終わり %>

@@ -1,7 +1,8 @@
 class ChecksController < ApplicationController
   def index
     @checks=Check.all
-    @comments = Comment.order('created_at DESC')
+    
+    
   end
 
   def new
@@ -11,13 +12,14 @@ class ChecksController < ApplicationController
 
   def create
     @check=Check.create(check_params)
-    redirect_to '/'
+    @check.save
+    redirect_to check_path(@check)
+    
   end
 
   def show
     @checks=Check.all
-   
-    
+    @comments = Comment.order('created_at DESC')
   end
 
 
