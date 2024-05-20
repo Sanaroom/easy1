@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:edit,:update]
+  #before_action :authenticate, only: [:edit, :update, :destroy]
 
   def index
     @comments=Comment.order('created_at DESC')
@@ -20,13 +21,14 @@ class CommentsController < ApplicationController
     end
   end
 
+
   def destroy
     comment = Comment.find(params[:id])
     comment.destroy
     redirect_to comments_path
   end
 
-  
+
 
   def edit
   end
@@ -34,7 +36,7 @@ class CommentsController < ApplicationController
   def update
     comment=Comment.find(params[:id])
     comment.update(comment_params)
-    redirect_to root_path
+    redirect_to check_path
     
   end
 
@@ -48,4 +50,8 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
+  #def authenticate
+    #unless params[:password] == comment.password
+      #redirect_to root_path, alert: "パスワードが正しくありません"
+  #end
 end

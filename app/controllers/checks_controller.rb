@@ -28,6 +28,17 @@ class ChecksController < ApplicationController
     redirect_to check_path
   end
 
+  def edit
+    @check=Check.find(params[:id])
+  end
+
+  def update
+    check=Check.find(params[:id])
+    check.update(check_params)
+    redirect_to check_path
+  end
+
+
 
   private
   def check_params

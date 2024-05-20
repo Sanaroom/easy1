@@ -4,7 +4,7 @@
 
 <style>
     table {
-      width: 400px;
+      width: 600px;
       border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
     }
 
@@ -25,6 +25,8 @@
       <th >番号</th>
       <th>出席確認</th>
       <th>登校時間</th>
+      <th>編集</th>
+      <th>削除</th>
     </tr>
   </thead>
   <tbody>
@@ -33,6 +35,7 @@
         <td><%= check.number %></td>
         <td><%= check.attendance %></td>
         <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
+        <td><%= link_to '編集', edit_check_path(check.id) %></td>
         <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
       </tr>
     <% end %>
