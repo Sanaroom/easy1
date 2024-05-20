@@ -12,7 +12,9 @@
     <ul class='list-nav'>
       <li class='sensei'>
         <%= link_to image_tag("sensei-penguin.png", class:"sensei-icon") %>
-        <%= link_to "先生のページへ", class:"sensei-content" %>
+        <%= link_to "先生のページへ", new_user_registration_path, class:"sign-in" %>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+        
       </li>
 
       <li class='child'>
