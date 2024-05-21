@@ -1,10 +1,12 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:edit,:update]
   #before_action :authenticate, only: [:edit, :update, :destroy]
+  
 
   def index
     @comments=Comment.order('created_at DESC')
     @comment=Comment.new
+    @check = Check.order('created_at DESC')
     
   end
 
@@ -50,6 +52,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
+  
   #def authenticate
     #unless params[:password] == comment.password
       #redirect_to root_path, alert: "パスワードが正しくありません"

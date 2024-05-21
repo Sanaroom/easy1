@@ -1,8 +1,9 @@
 <header class='check-top-page'>
  
   <div class='easy-bar-content'>
-    <%= link_to image_tag("school.png", class:"school-icon"),checks_path %>
+    <%= link_to image_tag("school.png", class:"school-icon"),"/" %>
   </div>
+
 
   <div class='date-contents'>
     <p>今日は <%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
@@ -12,10 +13,19 @@
   <div class='nav'>
     <ul class='list-nav'>
       
-
       <li class='child'>
         <%= link_to image_tag("child-penguin.png", class:"child-icon") %>
         <%= link_to "みんなのページへ", checks_path,class:"child-content" %>
+      </li>
+
+      <li class='show-page'>
+        <%= link_to image_tag("sensei-penguin.png", class:"sensei-icon") %>
+        <%= link_to "出欠一覧へ", check_path(@check),class:"sensei-content" %>
+      </li>
+
+      <li class='log_out'>
+        <%= link_to image_tag("log_out.png", class:"log_out-icon") %>
+        <%= link_to "ログアウト", destroy_user_session_path,class:"log_out-content" %>
       </li>
 
     </ul>

@@ -37,15 +37,7 @@
 }
 
 /*先生内*/
-.sensei{
-  display:flex;
-  flex-flow: column;
-  margin-right: 10px;
-}
-/*先生アイコン*/
-.sensei-icon{
-  width: 5vw;
-}
+
 
 /*子ども内*/
 .child{

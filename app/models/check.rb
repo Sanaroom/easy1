@@ -4,6 +4,5 @@ class Check < ApplicationRecord
     validates :attendance
   end
 
- 
-
+  has_many :comments
 end
