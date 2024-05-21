@@ -1,3 +1,7 @@
+.date-contents{
+  font-size: 30px;
+}
+
 .child{
   margin-right: 20px;
 }
@@ -10,5 +14,9 @@
 /*先生アイコン*/
 .sensei-icon{
   width: 5vw;
+  margin-right: 20px;
 }
 
+.log_out-icon{
+  width: 5vw;
+}

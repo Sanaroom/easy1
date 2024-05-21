@@ -13,13 +13,13 @@ class ChecksController < ApplicationController
 
   def create
     @check=Check.create(check_params)
-    @check.save
+    if @check.save
     redirect_to check_path(@check)
-    
+    end
   end
 
   def show
-    @checks=Check.all
+    @checks=Check.order('created_at DESC')
     @comments = Comment.order('created_at DESC')
   end
 

@@ -5,5 +5,4 @@ class Check < ApplicationRecord
   end
 
   has_many :comments
-
 end
