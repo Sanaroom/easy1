@@ -1,0 +1,22 @@
+.top-main{
+  width: 1500px;
+  height: 500px;
+  background-color: aquamarine;
+  position: relative;
+}
+
+.contents{
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 50px;
+  text-align: center;
+  padding:80px 0;
+  font-size: 50px;
+  width: 700px;
+  height: 400px;
+  background-color: yellow;
+}
+
+.sign-in1{
+  text-decoration: none;
+}

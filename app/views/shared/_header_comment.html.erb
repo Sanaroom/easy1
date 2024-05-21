@@ -11,10 +11,14 @@
   <div class='nav'>
     <ul class='list-nav'>
       
-
       <li class='child'>
         <%= link_to image_tag("child-penguin.png", class:"child-icon") %>
         <%= link_to "みんなのページへ", checks_path,class:"child-content" %>
+      </li>
+
+      <li class='show-page'>
+        <%= link_to image_tag("sensei-penguin.png", class:"sensei-icon") %>
+        <%= link_to "出欠一覧へ", check_path(@check),class:"sensei-content" %>
       </li>
 
     </ul>

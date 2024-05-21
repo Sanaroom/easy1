@@ -1,6 +1,8 @@
 <%= render "shared/header" %>
 
-
- <%= link_to('先生のページへ', new_user_session_path,class:"sign-in") %>
-
-<%= link_to('みんなのページへ', checks_path,class:"sign-in") %>
+<div class='top-main'>
+  <ul class='contents'>
+    <li><%= link_to('先生のページへ', new_user_session_path,class:"sign-in1") %></li><br>
+    <li><%= link_to('みんなのページへ', checks_path,class:"sign-in1") %></li>
+  </div>
+</div>

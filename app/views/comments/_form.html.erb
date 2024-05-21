@@ -1,4 +1,4 @@
-<%= form_with(model: @comment, url:comments_path, local: true) do |f| %>
+    <%= form_with(model: @comment, url:comments_path, local: true) do |f| %>
       <div class='comment-messages'>
         <h1 class='comment1'>
           <%= f.text_area :board,  placeholder: "コメントする", class:"board-text", id:"board-text" %>

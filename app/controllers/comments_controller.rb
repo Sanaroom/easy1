@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
   def index
     @comments=Comment.order('created_at DESC')
     @comment=Comment.new
+    @check = Check.order('created_at DESC')
     
   end
 
