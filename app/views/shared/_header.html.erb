@@ -5,7 +5,8 @@
   </div>
 
   <div class='date-contents'>
-    日付
+    <p>今日は <%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
+    現在時刻：<p class='clock' id="Clock"></p>
   </div>
 
   <div class='nav'>
