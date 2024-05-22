@@ -43,6 +43,6 @@ class ChecksController < ApplicationController
 
   private
   def check_params
-    params.require(:check).permit(:number, :attendance)
+    params.require(:check).permit(:user_id,:number, :attendance).merge(user_id: current_user.id)
   end
 end
