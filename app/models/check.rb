@@ -1,8 +1,9 @@
 class Check < ApplicationRecord
   with_options presence: true do
+    validates :user
     validates :number
     validates :attendance
   end
 
-  has_many :comments
+  belongs_to :user
 end
