@@ -8,7 +8,6 @@ class ChecksController < ApplicationController
 
   def new
     @check=Check.new
-    @default_text = "学校に来たよ！（●）"
   end
 
   def create
@@ -22,6 +21,11 @@ class ChecksController < ApplicationController
     @checks=Check.order('created_at DESC')
     @comments = Comment.order('created_at DESC')
     @check_count = Check.count
+
+    @attendance_count = 0 # 初期化
+    count = Check.where(attendance_id: 1).count
+    # 合計にカウントした数を加える
+    @attendance_count += count
   end
 
   def destroy
@@ -44,6 +48,6 @@ class ChecksController < ApplicationController
 
   private
   def check_params
-    params.require(:check).permit(:user_id,:number, :attendance).merge(user_id: current_user.id)
+    params.require(:check).permit(:user_id,:number_id, :attendance_id).merge(user_id: current_user.id)
   end
 end

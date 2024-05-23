@@ -31,8 +31,8 @@
       <tbody>
         <% @checks.each do |check| %>
           <tr>
-            <td><%= check.number %></td>
-            <td><%= check.attendance %></td>
+            <td><%= check.number.name %></td>
+            <td><%= check.attendance.name %></td>
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
           </tr>
         <% end %>
@@ -40,9 +40,14 @@
     </table>
 
     <div class="count">
-    <p><%= @check_count %>人</p>
-    </div>
 
+      <div class="number-count">
+      <p>登録済み：<%= @check_count %>人</p>
+      </div>
+      <div class="attendance-count">
+      <p>出席：<%= @attendance_count %>人</p>
+      </div>
+    </div>
 
   </div>
    

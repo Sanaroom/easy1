@@ -34,3 +34,13 @@
 .show-comment p {
   
 }
+
+.count{
+  display: flex;
+  width: 333px;
+  background-color: orange;
+}
+
+.number-count{
+  padding-right: 65px;
+}
