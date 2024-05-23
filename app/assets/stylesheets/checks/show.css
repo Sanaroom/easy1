@@ -4,6 +4,14 @@
   justify-content: space-around;
   background-color: rgb(238, 238, 201);
   margin-top: 30px;
+  background: url('show.jpg') no-repeat ;
+  background-size: cover; 
+  background-position: center; 
+}
+
+.show-check{
+  padding-top: 20px;
+  font-weight: bold;
 }
 
 .check-show-table{
@@ -15,7 +23,7 @@
 .show-comment{
   height: 450px;
   width: 650px;
-  background-color: orange;
+  padding-top: 20px;
   font-size: 40px;
 }
 
@@ -25,4 +33,14 @@
 
 .show-comment p {
   
+}
+
+.count{
+  display: flex;
+  width: 333px;
+  background-color: orange;
+}
+
+.number-count{
+  padding-right: 65px;
 }

@@ -4,7 +4,8 @@
   <div class="show-check">
     <style>
       table {
-        width: 600px;
+        width: 500px;
+        line-height: 13px;
         border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
       }
 
@@ -22,7 +23,7 @@
     <table class='check-show-table'>
       <thead>
         <tr>
-          <th >出席番号</th>
+          <th>出席番号</th>
           <th>出席確認</th>
           <th>登校時間</th>
         </tr>
@@ -30,8 +31,8 @@
       <tbody>
         <% @checks.each do |check| %>
           <tr>
-            <td><%= check.number %></td>
-            <td><%= check.attendance %></td>
+            <td><%= check.number.name %></td>
+            <td><%= check.attendance.name %></td>
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
           </tr>
         <% end %>
@@ -39,9 +40,14 @@
     </table>
 
     <div class="count">
-    <p><%= @check_count %>人</p>
-    </div>
 
+      <div class="number-count">
+      <p>登録済み：<%= @check_count %>人</p>
+      </div>
+      <div class="attendance-count">
+      <p>出席：<%= @attendance_count %>人</p>
+      </div>
+    </div>
 
   </div>
    

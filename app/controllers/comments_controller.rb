@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
   def index
     @comments=Comment.order('created_at DESC')
     @comment=Comment.new
-    @checks = Check.order(:number)
+    @checks = Check.order(:number_id)
     
   end
  

@@ -32,8 +32,8 @@
       <tbody>
         <% @checks.each do |check| %>
           <tr>
-            <td><%= check.number %></td>
-            <td><%= check.attendance %></td>
+            <td><%= check.number_id %></td>
+            <td><%= check.attendance_id %></td>
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
             <td><%= link_to '編集', edit_check_path(check.id) %></td>
             <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>

@@ -1,8 +1,8 @@
 ## checks テーブル
 | Column             | Type    | Options     |
 | ------------------ | ------- | ----------- |
-| number             | integer | null: false |
-| attendance         | integer | null: false |
+| number_id             | integer | null: false |
+| attendance_id         | integer | null: false |
 
 Association
   belongs_to:sheet

@@ -5,4 +5,6 @@ class Comment < ApplicationRecord
   end
 
   belongs_to :user
+  
+
 end

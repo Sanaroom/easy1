@@ -7,10 +7,10 @@
       <div class='new-messages'>
         <h1 class='message1'>
           わたしは、<br><br>
-          (<%= f.text_area :number, class:"check-number", id:"check-number", placeholder:"番号" %>
+          (<%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"check-number"}) %>
           番さんは、)<br><br>
          
-          <%= f.text_area :attendance, value: @default_text, readonly: true, class:"check-attendance", id:"check-attendance", placeholder:"欠席" %>
+          <%= f.collection_select(:attendance_id, Attendance.all, :id, :name, {}, {class:"check-number"})   %>
         </h1>
 
         <div class="check_button">

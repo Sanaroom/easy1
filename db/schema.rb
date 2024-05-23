@@ -12,8 +12,8 @@
 
 ActiveRecord::Schema[7.0].define(version: 2024_05_22_033128) do
   create_table "checks", charset: "utf8", force: :cascade do |t|
-    t.string "number", default: "", null: false
-    t.string "attendance", default: "", null: false
+    t.integer "number_id", null: false
+    t.integer "attendance_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
