@@ -21,7 +21,11 @@
 .school-icon{
   width: 8vw;
   margin-right: 5vw;
-  
+}
+
+.grade-class{
+  margin-left: 20px;
+  font-size: 25px;
 }
 
 /*右側（リスト側）*/

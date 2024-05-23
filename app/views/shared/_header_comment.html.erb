@@ -1,7 +1,15 @@
 <header class='check-top-page'>
  
-  <div class='easy-bar-content'>
-    <%= link_to image_tag("school.png", class:"school-icon"),"/" %>
+  <div class="header-left">
+    <div class='easy-bar-content'>
+      <%= link_to image_tag("school.png", class:"school-icon"),checks_path %>
+    </div>
+
+    <div class="grade-class">
+      <% if user_signed_in? %>
+        <p>クラス： <%= current_user.grade_id %>年<%= current_user.class_id %>組</p>
+      <% end %>
+    </div>
   </div>
 
 
