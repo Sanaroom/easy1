@@ -1,53 +1,60 @@
 <%= render "shared/header" %>
 
 <div class='show-main'>
+  <div class="show-check">
+    <style>
+      table {
+        width: 600px;
+        border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
+      }
 
-<style>
-    table {
-      width: 600px;
-      border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
-    }
+      th, td {
+        border: 1px solid #000; /* セルの境界線 */
+        padding: 8px; /* セル内の余白 */
+        text-align: left; /* テキストの配置 */
+      }
 
-    th, td {
-      border: 1px solid #000; /* セルの境界線 */
-      padding: 8px; /* セル内の余白 */
-      text-align: left; /* テキストの配置 */
-    }
+      th {
+        background-color: #f2f2f2; /* ヘッダーの背景色 */
+      }
+    </style>
 
-    th {
-      background-color: #f2f2f2; /* ヘッダーの背景色 */
-    }
-  </style>
+    <table class='check-show-table'>
+      <thead>
+        <tr>
+          <th >出席番号</th>
+          <th>出席確認</th>
+          <th>登校時間</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @checks.each do |check| %>
+          <tr>
+            <td><%= check.number %></td>
+            <td><%= check.attendance %></td>
+            <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
- <table class='check-show-table'>
-  <thead>
-    <tr>
-      <th >番号</th>
-      <th>出席確認</th>
-      <th>登校時間</th>
-      <th>編集</th>
-      <th>削除</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @checks.each do |check| %>
-      <tr>
-        <td><%= check.number %></td>
-        <td><%= check.attendance %></td>
-        <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
-        <td><%= link_to '編集', edit_check_path(check.id) %></td>
-        <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
-      </tr>
-    <% end %>
-  </tbody>
- </table>
+    <div class="count">
+    <p><%= @check_count %>人</p>
+    </div>
 
- <%# 先生からのコメントの表示 %>
+
+  </div>
+   
+   
+
+  <%# 先生からのコメントの表示 %>
   <div class='show-comment'>
-    ＜先生からのお知らせ＞
-    <% @comments.each do |comment| %>
-      <p><%= comment.board %></p>
-    <% end %>
+    <div class="teacher-comment">
+      ＜先生からのお知らせ＞
+    </div>
+      <% @comments.each do |comment| %>
+        <p><%= comment.board %></p>
+      <% end %>
   </div>
   <%# 先生からのコメントの表示 %>
 

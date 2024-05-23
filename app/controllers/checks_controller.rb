@@ -21,6 +21,7 @@ class ChecksController < ApplicationController
   def show
     @checks=Check.order('created_at DESC')
     @comments = Comment.order('created_at DESC')
+    @check_count = Check.count
   end
 
   def destroy

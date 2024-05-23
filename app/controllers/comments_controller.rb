@@ -6,11 +6,10 @@ class CommentsController < ApplicationController
   def index
     @comments=Comment.order('created_at DESC')
     @comment=Comment.new
-    @check = Check.order('created_at DESC')
+    @checks = Check.order(:number)
     
   end
-
-  
+ 
 
   def create
     @comment = Comment.new(comment_params)
@@ -26,8 +25,15 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find(params[:id])
-    comment.destroy
-    redirect_to comments_path
+
+    if comment.destroy
+      redirect_to comments_path
+    end
+
+    @checks = Check.find(params[:check_id])
+    if @checks.destroy
+      redirect_to comments_path
+    end
   end
 
 

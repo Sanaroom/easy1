@@ -1,5 +1,26 @@
+.comment-2222{
+  display: flex;
+}
+
+.show-table{
+  font-size: 20px;
+  margin: 0 auto;
+  border: 1px solid black;
+  
+}
+
+.show-main2{
+  width: 800px;
+  height: 500px;
+  justify-content: space-around;
+  background-color: rgb(238, 238, 201);
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+
 .comment-messages{
-  width: 1500px;
+  width: 700px;
   height: 250px;
   background-color: yellow;
 }
@@ -10,33 +31,40 @@
 }
 
 .board-text{
-  font-size: 60px;
+  font-size: 50px;
   margin-top: 40px;
 }
 
 
 .board-btn{
   font-size: 40px;
-  margin-left: 1000px;
+  margin-left: 410px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .comment-show{
-  width: 1500px;
-  height: 500px;
-  background-color: lightblue;
+  width: 700px;
+  height: 250px;
+  background-color: yellow;
   
 }
 
 .comment-title{
-  font-size: 50px;
+  font-size: 30px;
+  line-height: 20px;
   text-align: center;
-  padding-top: 30px;
-}
-
-.show-table{
-  font-size: 20px;
-  margin: 0 auto;
-  border: 1px solid black;
-  
+  padding-top: 15px;
 }
 

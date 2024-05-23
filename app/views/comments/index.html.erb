@@ -1,37 +1,80 @@
 <%= render "shared/header_comment" %>
 
-  <%#コメント記入欄%>
-    <%= render partial: "form", locals: { comment: @comment } %>
-  <%# 終わり %>
-    
-  
+<div class="comment-2222">
+  <div class='show-main2'>
+    <style>
+        table {
+          width: 600px;
+          border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
+        }
 
-<div class="comment-show">
-  <div class="comment-title">
-        ＜コメント一覧＞<br>
-        ----------------------------------------
+        th, td {
+          border: 1px solid #000; /* セルの境界線 */
+          padding: 8px; /* セル内の余白 */
+          text-align: left; /* テキストの配置 */
+        }
+
+        th {
+          background-color: #f2f2f2; /* ヘッダーの背景色 */
+        }
+      </style>
+
+    <table class='check-show-table'>
+      <thead>
+        <tr>
+          <th >出席番号</th>
+          <th>出席確認</th>
+          <th>登校時間</th>
+          <th>編集</th>
+          <th>削除</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @checks.each do |check| %>
+          <tr>
+            <td><%= check.number %></td>
+            <td><%= check.attendance %></td>
+            <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
+            <td><%= link_to '編集', edit_check_path(check.id) %></td>
+            <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-  
-<table class="show-table">
-  <thead>
-    <tr>
-      <th>コメント</th>
-      <th>日時</th>
-      <!-- 必要な列を追加 -->
-    </tr>
-  </thead>
-  
-  
-  <tbody>    
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.board %></td>
-        <td><%= comment.created_at %></td>
-        <td><%= link_to '編集', edit_comment_path(comment.id) %></td>
-        <td> <%= link_to '削除', comment_path(comment.id), data: { turbo_method: :delete } %></td>
-    <% end %>
-  </tbody>
-  
 
-</table>
+  <div class="comment-main">
+    <div class="comment-new">
+      <%#コメント記入欄%>
+      <%= render partial: "form", locals: { comment: @comment } %>
+      <%# 終わり %>
+    </div>
+    
+
+    <div class="comment-show">
+      <div class="comment-title">
+          ＜コメント一覧＞<br>
+          -------------------------------------------
+        </div>
+      <table class="show-table">
+        <thead>
+          <tr>
+            <th>コメント</th>
+            <th>日時</th>
+            <!-- 必要な列を追加 -->
+          </tr>
+        </thead>
+        <tbody>    
+          <% @comments.each do |comment| %>
+            <tr>
+              <td><%= comment.board %></td>
+              <td><%= comment.created_at.localtime.strftime("%H:%M") %></td>
+              <td><%= link_to '編集', edit_comment_path(comment.id) %></td>
+              <td> <%= link_to '削除', comment_path(comment.id), data: { turbo_method: :delete } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

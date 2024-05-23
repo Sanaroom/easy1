@@ -1,24 +1,45 @@
 
-
-
 .main{
   height: 530px;
   width: 1500px;  
-  background-color: yellow;
   position: relative;
+  background: url('sakura.png') no-repeat ;
+  background-size: 1000px; 
+  background-position: center; 
+  
+}
+
+.messages{
+  font-weight: bold;
 }
 
 .form{
   position: absolute;
-  left: 200px;
-  height: 500px;
+  left: 500px;
+  top: 50px;
+  height: 120px;
   width: 500px;
   text-align:center;
+  background-color: orange;
+  opacity: 80%;
+}
+
+.good-morning span{
+  color: black;
+  font-size: 60px;
+  font-weight: bold;
   
 }
 
+.sell-btn{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
 .number-box{
   font-size: 40px;
+  
 }
 
 .comment{
@@ -28,11 +49,8 @@
   background-color: orange;
 }
 
-.good-morning{
-  text-align: left;
-  font-size: 60px;
-  
-}
+
+
 
 .check-content{
   font-size: 40px;
@@ -43,9 +61,7 @@
   font-size: 40px;
 }
 
-.sell-btn{
-  font-size: 30px;
-}
+
 
 .check-comment{
   padding-top: 10px;

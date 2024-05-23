@@ -1,23 +1,22 @@
 <%= render "shared/header" %>
 
-<div class='main'>
-  
-  <div class='form'>
+<body>
+  <div class='main'>
     
+    <div class='form'>
       
-      <div class='messages'>
-        <h1 class='good-morning'>
-          おはよう！
-        </h1>
         
-      </div>
+        <div class='messages'>
+          <h1 class='good-morning'>
+            <span>おはよう！</span>
+          </h1>
+          
+        </div>
 
-      <div class='form-button'>
-        <%= link_to '出欠かくにんへ',new_check_path, class:"sell-btn" %>
-      </div>
-    <%# end %>
+        <div class='form-button'>
+          <%= link_to '出欠かくにんへ',new_check_path, class:"sell-btn" %>
+        </div>
+      <%# end %>
+    </div>
   </div>
-
-  
-
-</div>
+</body>
