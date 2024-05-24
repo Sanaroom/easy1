@@ -4,14 +4,14 @@
   <div class='show-main2'>
     <style>
         table {
-          width: 600px;
+          width: 500px;
           border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
         }
 
         th, td {
           border: 1px solid #000; /* セルの境界線 */
-          padding: 8px; /* セル内の余白 */
-          text-align: left; /* テキストの配置 */
+          padding: 3px; /* セル内の余白 */
+          text-align: right; /* テキストの配置 */
         }
 
         th {
@@ -32,8 +32,8 @@
       <tbody>
         <% @checks.each do |check| %>
           <tr>
-            <td><%= check.number_id %></td>
-            <td><%= check.attendance_id %></td>
+            <td><%= check.number.name %></td>
+            <td style="<%= 'background-color: #00FF00;' if check.attendance.name == '出席' %>"><%= check.attendance.name %></td>
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
             <td><%= link_to '編集', edit_check_path(check.id) %></td>
             <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
@@ -41,6 +41,15 @@
         <% end %>
       </tbody>
     </table>
+
+    <div class="count">
+      <div class="number-count">
+      <p>登録済み：<%= @check_count %>人</p>
+      </div>
+      <div class="attendance-count">
+      <p>出席：<%= @attendance_count %>人</p>
+      </div>
+    </div>
   </div>
 
   <div class="comment-main">
@@ -55,7 +64,10 @@
       <div class="comment-title">
           ＜コメント一覧＞<br>
           -------------------------------------------
-        </div>
+      </div>
+      
+      
+
       <table class="show-table">
         <thead>
           <tr>

@@ -1,0 +1,56 @@
+.top-main{
+  width: 1500px;
+  height: 1000px;
+  background-color: #f5f5f5;
+  padding: 100px;
+  
+  
+}
+
+.top-contents{
+  margin-left: 270px;
+  text-align: center;
+  padding:80px 0;
+  width: 700px;
+  height: 400px;
+  
+}
+
+.sign-in1{
+  text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+  background-color: #81d2dd;
+  border-bottom: 5px solid #54c5bf;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 30px;
+}
+
+
+.sign-in2{
+  text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+  background-color: #81d2dd;
+  border-bottom: 5px solid #54c5bf;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 30px;
+  
+}
+
+.sign-in3{
+  text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: ;
+  background-color: #81d2dd;
+  border-bottom: 5px solid #54c5bf;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 30px;
+ 
+}

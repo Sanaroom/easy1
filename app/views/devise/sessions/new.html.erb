@@ -1,6 +1,10 @@
-<div class="contents row">
+<%= render "shared/header_top" %>
+
+<div class="contents_row">
   <div class="container">
-    <h2>ログイン</h2>
+    <div class="login-name">
+      ログイン
+    </div>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <%= f.label :ID %><br />
@@ -13,11 +17,12 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "ログイン" %>
+        <%= f.submit "ログイン", class:"login-button" %>
       </div>
 
-      <%= link_to "新規登録へ", new_user_registration_path %>
-
+      <div class="sinki">
+      <%= link_to "アカウントを作成する", new_user_registration_path,class:"sinki-button" %>
+      </div>
     <% end %>
   </div>
 </div>

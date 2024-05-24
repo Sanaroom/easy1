@@ -2,21 +2,22 @@
 .main{
   height: 530px;
   width: 1500px;  
-  position: relative;
+  
   background: url('sakura.png') no-repeat ;
   background-size: 1000px; 
   background-position: center; 
+  margin-top: 130px;
   
 }
 
 .messages{
   font-weight: bold;
+  padding-bottom: 30px;
 }
 
 .form{
-  position: absolute;
-  left: 500px;
-  top: 50px;
+  margin-left: 500px;
+  padding-top: 160px;
   height: 120px;
   width: 500px;
   text-align:center;
@@ -35,6 +36,14 @@
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #81d2dd;
+  border-bottom: 5px solid #54c5bf;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 30px;
+  
 }
 
 

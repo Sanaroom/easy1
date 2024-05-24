@@ -40,8 +40,9 @@ class ChecksController < ApplicationController
 
   def update
     check=Check.find(params[:id])
-    check.update(check_params)
-    redirect_to check_path
+    if check.update(check_params)
+      redirect_to check_path
+    end
   end
 
 

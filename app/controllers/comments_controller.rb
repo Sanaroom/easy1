@@ -1,12 +1,20 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:edit,:update]
-  #before_action :authenticate, only: [:edit, :update, :destroy]
+  #before_action :authenticate, only: [:index,:create,:edit, :update, :destroy]
+  
+
   
 
   def index
     @comments=Comment.order('created_at DESC')
     @comment=Comment.new
     @checks = Check.order(:number_id)
+    @check_count = Check.count
+
+    @attendance_count = 0 # 初期化
+    count = Check.where(attendance_id: 1).count
+    # 合計にカウントした数を加える
+    @attendance_count += count
     
   end
  
@@ -58,9 +66,6 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
+ 
   
-  #def authenticate
-    #unless params[:password] == comment.password
-      #redirect_to root_path, alert: "パスワードが正しくありません"
-  #end
 end

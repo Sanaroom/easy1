@@ -1,5 +1,6 @@
 .comment-2222{
   display: flex;
+  margin-top: 130px;
 }
 
 .show-table{
@@ -11,7 +12,7 @@
 
 .show-main2{
   width: 800px;
-  height: 500px;
+  height: 600px;
   justify-content: space-around;
   background-color: rgb(238, 238, 201);
   padding-top: 15px;

@@ -1,47 +1,53 @@
-<div class="contents row">
-  <div class="container">
-    <h2>Sign up</h2>
+<%= render "shared/header_top" %>
+
+<div class="contents_regi">
+  <div class="container_regi">
+    <div class="regi-name">
+      アカウントの作成
+    </div>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="field">
-        <%= f.label :email %><br />
+      <div class="field1">
+        <%= f.label :ID %><br />
         <%= f.email_field :email %>
       </div>
 
-      <div class="field">
-        <%= f.label :password %>
+      <div class="field1">
+        <%= f.label :パスワード %>
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <em>(<%= @minimum_password_length %>文字以上 )</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
+      <div class="field1">
+        <%= f.label :パスワード再入力 %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 
-      <div class="field">
-        <%= f.label :grade_id %><br />
+      <div class="field1">
+        <%= f.label :学年 %><br />
         <%= f.text_field :grade_id %>
       </div>
       
-      <div class="field">
-        <%= f.label :class_id %><br />
+      <div class="field1">
+        <%= f.label :組 %><br />
         <%= f.text_field :class_id %>
       </div>
 
-      <div class="field">
-        <%= f.label :name %><br />
+      <div class="field1">
+        <%= f.label :先生の名前（表示名） %><br />
         <%= f.text_field :name %>
       </div>
 
-      <div class="actions">
-        <%= f.submit "Sign up" %>
+      <div class="actions1">
+        <%= f.submit "作成",class:"regi-button" %>
       </div>
 
-      <%= link_to "ログインページへ", new_user_session_path %>
+      <div class="log-page">
+        <%= link_to "ログインページへ", new_user_session_path,class:"log-page1" %>
+      </div>
 
     <% end %>
   </div>

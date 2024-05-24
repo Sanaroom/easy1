@@ -1,25 +1,38 @@
+
 * {
   box-sizing: border-box;
 }
 
 /*全体*/
 .check-top-page{
-  height: 150px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000; 
+
+  height: 120px;
   width: 1500px;  
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  
+
   /*background-color: greenyellow;*/
 }
 
 /*左側*/
 .easy-bar-content{
   margin-left: 20px;
+  width: 100px;
+  
+  
 }
 
 /*学校アイコン*/
 .school-icon{
-  width: 8vw;
+  width: 4vw;
   margin-right: 5vw;
 }
 
