@@ -2,7 +2,7 @@
  
   <div class="header-left">
     <div class='easy-bar-content'>
-      <%= link_to image_tag("school.png", class:"school-icon"),checks_path %>
+      <%= link_to image_tag("school.png", class:"school-icon",id:"school"),checks_path %>
     </div>
 
     <div class="grade-class">
@@ -22,13 +22,13 @@
   <div class='nav'>
     <ul class='list-nav'>
       <li>
-        <%= link_to "みんなのページへ", checks_path,class:"child-content" %>
+        <%= link_to "みんなのページへ", checks_path,class:"child-content",id:"sign-in1" %>
       </li>
       <li>
-        <%= link_to "出欠一覧へ", check_path(@checks),class:"sensei-content" %>
+        <%= link_to "出欠一覧へ", check_path(@checks),class:"sensei-content",id:"sign-in2" %>
       </li>
       <li>
-        <%= link_to "ログアウト", destroy_user_session_path,class:"log_out-content" %>
+        <%= link_to "ログアウト", destroy_user_session_path,class:"log_out-content",id:"sign-in3" %>
       </li>
     </ul>
   </div>
