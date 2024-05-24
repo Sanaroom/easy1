@@ -14,28 +14,22 @@
 
 
   <div class='date-contents'>
-    <p>今日は <%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
-    現在時刻：<p class='clock' id="Clock"></p>
+    <p class="date1">今日:<%= l Date.today, format: "%-m月%-d日(%a)" %></p>
+    現在時刻:<p class='clock'  id="Clock">></p></span>
+    </div>
   </div>
 
   <div class='nav'>
     <ul class='list-nav'>
-      
-      <li class='child'>
-        <%= link_to image_tag("child-penguin.png", class:"child-icon") %>
+      <li>
         <%= link_to "みんなのページへ", checks_path,class:"child-content" %>
       </li>
-
-      <li class='show-page'>
-        <%= link_to image_tag("sensei-penguin.png", class:"sensei-icon") %>
+      <li>
         <%= link_to "出欠一覧へ", check_path(@checks),class:"sensei-content" %>
       </li>
-
-      <li class='log_out'>
-        <%= link_to image_tag("log_out.png", class:"log_out-icon") %>
+      <li>
         <%= link_to "ログアウト", destroy_user_session_path,class:"log_out-content" %>
       </li>
-
     </ul>
   </div>
  

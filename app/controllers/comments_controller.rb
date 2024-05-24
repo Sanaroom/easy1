@@ -11,10 +11,18 @@ class CommentsController < ApplicationController
     @checks = Check.order(:number_id)
     @check_count = Check.count
 
-    @attendance_count = 0 # 初期化
+    @attendance_count1 = 0 
     count = Check.where(attendance_id: 1).count
-    # 合計にカウントした数を加える
-    @attendance_count += count
+    @attendance_count1 += count
+
+    @attendance_count2 = 0 
+    count = Check.where(attendance_id: 2).count
+    @attendance_count2 += count
+
+    @attendance_count3 = 0 
+    count = Check.where(attendance_id: 3).count
+    @attendance_count3 += count
+
     
   end
  

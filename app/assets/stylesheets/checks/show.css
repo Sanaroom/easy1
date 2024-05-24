@@ -28,6 +28,8 @@
   font-size: 40px;
 }
 
+
+
 .teacher-comment{
   text-align: center;
 }
@@ -43,9 +45,18 @@
 }
 
 .number-count{
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
-.attendance-count{
+.count1{
   background-color: #00FF00;
 }
+
+.count2{
+  background-color: rgb(235, 163, 135);
+}
+
+.count3{
+  background-color: skyblue;
+}
+

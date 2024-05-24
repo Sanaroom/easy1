@@ -4,13 +4,13 @@
   <div class='show-main2'>
     <style>
         table {
-          width: 500px;
+          width: 400px;
           border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
         }
 
         th, td {
           border: 1px solid #000; /* セルの境界線 */
-          padding: 3px; /* セル内の余白 */
+          padding: 1px; /* セル内の余白 */
           text-align: right; /* テキストの配置 */
         }
 
@@ -22,7 +22,7 @@
     <table class='check-show-table'>
       <thead>
         <tr>
-          <th >出席番号</th>
+          <th>出席番号</th>
           <th>出席確認</th>
           <th>登校時間</th>
           <th>編集</th>
@@ -33,7 +33,17 @@
         <% @checks.each do |check| %>
           <tr>
             <td><%= check.number.name %></td>
-            <td style="<%= 'background-color: #00FF00;' if check.attendance.name == '出席' %>"><%= check.attendance.name %></td>
+            <td style="<%= 
+              if check.attendance.name == '出席'
+                'background-color: #00FF00;' 
+              elsif check.attendance.name == '欠席'
+                'background-color: rgb(235, 163, 135);'
+              elsif check.attendance.name == '遅刻'
+                'background-color: skyblue;'
+              else
+                ''
+              end
+            %>"> <%= check.attendance.name %></td>
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
             <td><%= link_to '編集', edit_check_path(check.id) %></td>
             <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
@@ -44,10 +54,12 @@
 
     <div class="count">
       <div class="number-count">
-      <p>登録済み：<%= @check_count %>人</p>
+        <p>登録済み：<%= @check_count %>人</p>
       </div>
       <div class="attendance-count">
-      <p>出席：<%= @attendance_count %>人</p>
+        <p class="count1">出席：<%= @attendance_count1 %>人</p>
+        <p class="count2">欠席：<%= @attendance_count2 %>人</p>
+        <p class="count3">遅刻：<%= @attendance_count3 %>人</p>
       </div>
     </div>
   </div>
@@ -63,12 +75,10 @@
     <div class="comment-show">
       <div class="comment-title">
           ＜コメント一覧＞<br>
-          -------------------------------------------
+          -----------------------------------------------------
       </div>
-      
-      
 
-      <table class="show-table">
+      <table class="comment-table">
         <thead>
           <tr>
             <th>コメント</th>
@@ -87,6 +97,7 @@
           <% end %>
         </tbody>
       </table>
+
     </div>
   </div>
 </div>

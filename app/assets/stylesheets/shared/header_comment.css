@@ -1,4 +1,8 @@
 .date-contents{
+  font-size: 20px;
+}
+
+.date1 {
   font-size: 30px;
 }
 
@@ -11,12 +15,35 @@
   flex-flow: column;
   margin-right: 20px;
 }
-/*先生アイコン*/
-.sensei-icon{
-  width: 5vw;
+/*右上のリンク*/
+.child-content{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #81d2dd;
+  border-bottom: 5px solid #54c5bf;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 30px;
   margin-right: 20px;
 }
 
-.log_out-icon{
-  width: 5vw;
+.sensei-content{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #81d2dd;
+  border-bottom: 5px solid #54c5bf;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.log_out-content{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #81d2dd;
+  border-bottom: 5px solid #54c5bf;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 30px;
 }

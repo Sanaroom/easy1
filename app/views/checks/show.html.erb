@@ -35,7 +35,19 @@
         <% @checks.each do |check| %>
           <tr>
             <td><%= check.number.name %></td>
-            <td style="<%= 'background-color: #00FF00;' if check.attendance.name == '出席' %>"><%= check.attendance.name %></td>
+            <td style="<%= 
+              if check.attendance.name == '出席'
+                'background-color: #00FF00;' 
+              elsif check.attendance.name == '欠席'
+                'background-color: rgb(235, 163, 135);'
+              elsif check.attendance.name == '遅刻'
+                'background-color: skyblue;'
+              else
+                ''
+              end
+            %>"> <%= check.attendance.name %></td>
+            
+
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
           </tr>
         <% end %>
@@ -44,10 +56,12 @@
 
     <div class="count">
       <div class="number-count">
-      <p>登録済み：<%= @check_count %>人</p>
+        <p>登録済み：<%= @check_count %>人</p>
       </div>
       <div class="attendance-count">
-      <p>出席：<%= @attendance_count %>人</p>
+        <p class="count1">出席：<%= @attendance_count1 %>人</p>
+        <p class="count2">欠席：<%= @attendance_count2 %>人</p>
+        <p class="count3">遅刻：<%= @attendance_count3 %>人</p>
       </div>
     </div>
   </div>
@@ -59,9 +73,11 @@
     <div class="teacher-comment">
       ＜先生からのお知らせ＞
     </div>
+    
       <% @comments.each do |comment| %>
-        <p><%= comment.board %></p>
+        <p class="comment22"><%= comment.board %></p>
       <% end %>
+    
   </div>
   <%# 先生からのコメントの表示 %>
 

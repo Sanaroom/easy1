@@ -12,9 +12,9 @@
 
 .show-main2{
   width: 800px;
-  height: 600px;
+  height: 650px;
   justify-content: space-around;
-  background-color: rgb(238, 238, 201);
+  background-color: #f5f5f5;
   padding-top: 15px;
   padding-left: 15px;
 }
@@ -23,7 +23,7 @@
 .comment-messages{
   width: 700px;
   height: 250px;
-  background-color: yellow;
+  background-color: #f5f5f5;
 }
 
 .comment1{
@@ -38,9 +38,31 @@
 
 
 .board-btn{
-  font-size: 40px;
+  font-size: 30px;
   margin-left: 410px;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+
+.comment-table{
+  width: 650px;
+  border-collapse: collapse;
+  text-align: left; 
+}
+
+.comment-table th{
+  background-color: #f2f2f2;
+}
+.comment-table th, td{
+  border: 1px solid #000; /* セルの境界線 */
+  padding: 3px; /* セル内の余白 */
+  text-align: left; /* テキストの配置 */
+  
+}
+
+
 
 
 
@@ -57,8 +79,8 @@
 
 .comment-show{
   width: 700px;
-  height: 250px;
-  background-color: yellow;
+  height: 400px;
+  background-color: #f5f5f5;
   
 }
 

@@ -1,20 +1,6 @@
 <%= render "shared/header" %>
 <div class='new-main'>
   <div class='new-messages'>
-    <%= form_with model: @check, url:checks_path,local: true do |f| %>
-        <div class='message1'>
-          今日、わたしは、<br><br>
-          (<%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"check-number"}) %>
-          番さん)<br><br>
-         
-          
-          <%= f.collection_select(:attendance_id, Attendance.all, :id, :name, {}, {class:"check-number"}) %>です。
-          
-        </div>
-
-        <div class="check_button">
-          <%= f.submit "とうろくボタン" ,class:"check-btn" %>
-        </div>
-    <%end%>
+    <%= render partial: "form", locals: { check: @check } %>
   </div>
 </div>

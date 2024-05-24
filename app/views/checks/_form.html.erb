@@ -1,8 +1,4 @@
-<%= render "shared/header" %>
-<div class='new-main'>
-  <%# 欠席フォーム %>
-  
-   <%= form_with(model: @check, url:check_path(@check),local: true,method: :patch) do |f| %>
+    <%= form_with model: @check, url:checks_path,local: true do |f| %>
       
       <div class='new-messages'>
         <h1 class='message1'>
@@ -20,4 +16,3 @@
       </div>
 
     <%end%>
-</div>
