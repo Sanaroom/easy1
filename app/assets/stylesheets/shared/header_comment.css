@@ -17,33 +17,21 @@
 }
 /*右上のリンク*/
 .child-content{
+  width: 110px;
+  text-align: center;
   text-decoration: none;
   padding: 10px;
   background-color: #81d2dd;
   border-bottom: 5px solid #54c5bf;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 10px;
   border-radius: 30px;
   margin-right: 20px;
+  
 }
 
-.sensei-content{
-  text-decoration: none;
-  padding: 10px;
-  background-color: #81d2dd;
-  border-bottom: 5px solid #54c5bf;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 30px;
-  margin-right: 20px;
+.grade-class1{
+  margin-left: 20px;
+  font-size: 15px;
 }
 
-.log_out-content{
-  text-decoration: none;
-  padding: 10px;
-  background-color: #81d2dd;
-  border-bottom: 5px solid #54c5bf;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 30px;
-}

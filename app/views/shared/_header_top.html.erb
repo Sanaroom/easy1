@@ -1,12 +1,23 @@
+
+
 <header class='check-top-page'>
  
-  <div class='easy-bar-content'>
-    <%= link_to image_tag("school.png", class:"school-icon",id:"school") %>
+  <div class="header-left">
+    <div class='easy-bar-content'>
+      <%= link_to image_tag("school.png", class:"school-icon",id:"school"),checks_path %>
+    </div>
+
+    <div class="grade-class">
+      <% if user_signed_in? %>
+        <p>クラス： <%= current_user.grade_id %>年<%= current_user.class_id %>組</p>
+      <% end %>
+    </div>
   </div>
 
   <div class='date-contents'>
     <p>今日は <%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
-    現在時刻：<p class='clock' id="Clock"></p>
+    <p>現在時刻</p>
+    <p class='clock' id="Clock"></p></p>
   </div>
 
   <div class='nav'>

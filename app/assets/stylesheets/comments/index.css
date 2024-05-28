@@ -8,22 +8,26 @@
   margin: 0 auto;
   border: 1px solid black;
   
+  
 }
 
 .show-main2{
-  width: 800px;
-  height: 650px;
-  justify-content: space-around;
-  background-color: #f5f5f5;
-  padding-top: 15px;
-  padding-left: 15px;
+  background-color: white;
+  padding-left: 40px;
+  padding-top: 20px;
+  width: 400px;
+  height: 800px;
+}
+.comment-main{
+  padding-left: 50px;
+  
 }
 
 
 .comment-messages{
-  width: 700px;
+  width: 800px;
   height: 250px;
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 .comment1{
@@ -50,6 +54,7 @@
   width: 650px;
   border-collapse: collapse;
   text-align: left; 
+  
 }
 
 .comment-table th{
@@ -78,9 +83,9 @@
 
 
 .comment-show{
-  width: 700px;
+  width: 800px;
   height: 400px;
-  background-color: #f5f5f5;
+  background-color: white;
   
 }
 

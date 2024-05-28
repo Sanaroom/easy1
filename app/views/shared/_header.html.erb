@@ -14,22 +14,20 @@
 
   <div class='date-contents'>
     <p>今日は <%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
-    現在時刻：<p class='clock' id="Clock"></p>
+    <p>現在時刻</p>
+    <p class='clock' id="Clock"></p></p>
   </div>
 
 
 
   <div class='nav'>
     <ul class='list-nav'>
-      
-
       <li class='child'>
         <%= link_to "みんなのページへ", checks_path,class:"child-content",id:"sign-in1" %>
       </li>
       <li class='child'>
         <%= link_to "先生のページへ", comments_path,class:"child-content" ,id:"sign-in2" %>
       </li>
-
     </ul>
   </div>
  

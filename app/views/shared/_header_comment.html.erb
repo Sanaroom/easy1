@@ -5,18 +5,19 @@
       <%= link_to image_tag("school.png", class:"school-icon",id:"school"),checks_path %>
     </div>
 
-    <div class="grade-class">
+    <div class="grade-class1">
       <% if user_signed_in? %>
         <p>クラス： <%= current_user.grade_id %>年<%= current_user.class_id %>組</p>
+        <p> <%= current_user.name %>先生</p>
       <% end %>
     </div>
   </div>
 
 
   <div class='date-contents'>
-    <p class="date1">今日:<%= l Date.today, format: "%-m月%-d日(%a)" %></p>
-    現在時刻:<p class='clock'  id="Clock">></p></span>
-    </div>
+    <p>今日は <%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
+    <p>現在時刻</p>
+    <p class='clock' id="Clock"></p></p>
   </div>
 
   <div class='nav'>
@@ -25,10 +26,10 @@
         <%= link_to "みんなのページへ", checks_path,class:"child-content",id:"sign-in1" %>
       </li>
       <li>
-        <%= link_to "出欠一覧へ", check_path(@checks),class:"sensei-content",id:"sign-in2" %>
+        <%= link_to "出欠一覧へ", check_path(@checks),class:"child-content",id:"sign-in2" %>
       </li>
       <li>
-        <%= link_to "ログアウト", destroy_user_session_path,class:"log_out-content",id:"sign-in3" %>
+        <%= link_to "ログアウト", destroy_user_session_path,class:"child-content",id:"sign-in3" %>
       </li>
     </ul>
   </div>
