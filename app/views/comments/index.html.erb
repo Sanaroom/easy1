@@ -2,23 +2,7 @@
 
 <div class="comment-2222">
   <div class='show-main2'>
-    <style>
-        table {
-         
-          width: 300px;
-          border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
-        }
-
-        th, td {
-          border: 1px solid #000; /* セルの境界線 */
-          padding: 1px; /* セル内の余白 */
-          text-align: right; /* テキストの配置 */
-        }
-
-        th {
-          background-color: #f2f2f2; /* ヘッダーの背景色 */
-        }
-      </style>
+    
 
     <table class='check-show-table'>
       <thead>
@@ -75,15 +59,16 @@
 
     <div class="comment-show">
       <div class="comment-title">
-          ＜コメント一覧＞<br>
-          -----------------------------------------------------
+          ＜コメント一覧＞
       </div>
 
       <table class="comment-table">
         <thead>
           <tr>
-            <th>コメント</th>
+            <th class="th1">コメント</th>
             <th>日時</th>
+            <th></th>
+            <th></th>
             <!-- 必要な列を追加 -->
           </tr>
         </thead>
@@ -92,7 +77,7 @@
             <tr>
               <td><%= comment.board %></td>
               <td><%= comment.created_at.localtime.strftime("%H:%M") %></td>
-              <td><%= link_to '編集', edit_comment_path(comment.id) %></td>
+              <td><%= link_to '編集', edit_comment_path(comment.id),class:"td1" %></td>
               <td> <%= link_to '削除', comment_path(comment.id), data: { turbo_method: :delete } %></td>
             </tr>
           <% end %>

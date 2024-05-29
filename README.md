@@ -1,13 +1,13 @@
 ## checks テーブル
 | Column             | Type    | Options     |
 | ------------------ | ------- | ----------- |
-| number_id             | integer | null: false |
-| attendance_id         | integer | null: false |
+| user               | references | null: false, foreign_key: true |
+| number_id          | integer | null: false |
+| attendance_id      | integer | null: false |
 
 Association
-  belongs_to:sheet
   belongs_to:user
-  belongs_to:comment
+  has_many:comments
 
 
 ## users テーブル
@@ -20,19 +20,16 @@ Association
 | name                | string    | null: false |
 
 Association
-  belongs_to:check
-  belongs_to:sheet
-  belongs_to:comment
+  has_many:checks
+  has_many:comments
 
 ## comments テーブル
 | Column    | Type       | Options     |
 | --------- | ---------- | ----------- |
-| comment   | text       | null: false |
-
-| event     | integer    | null: false |
 | user      | references | null: false, foreign_key: true |
+| board     | string     | null: false |
+
 
 Association
-  belongs_to:check
-  belongs_to:sheet
+  has_many:checks
   belongs_to:user

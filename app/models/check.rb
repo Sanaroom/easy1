@@ -10,6 +10,7 @@ class Check < ApplicationRecord
 
 
   belongs_to :user
+  has_many :comments
  
 
   extend ActiveHash::Associations::ActiveRecordExtensions
@@ -17,4 +18,7 @@ class Check < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :attendance
+
+  
+
 end

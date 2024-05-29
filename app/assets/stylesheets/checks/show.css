@@ -15,11 +15,27 @@
   font-weight: bold;
 }
 
-.check-show-table{
+.check-show-table2{
   text-align: left;
+  background-color:white;
+  width: 400px;
+  line-height: 10px;
+  border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
   
 }
 
+.check-show-table2 th{
+  border: 1px solid #000; /* セルの境界線 */
+  padding: 7px; /* セル内の余白 */
+  text-align: left; /* テキストの配置 */
+  background-color: #f2f2f2; /* ヘッダーの背景色 */
+}
+
+.check-show-table2 td{
+  border: 1px solid #000; /* セルの境界線 */
+  padding: 7px; /* セル内の余白 */
+  text-align: right; /* テキストの配置 */
+}
 
 .show-comment{
   height: 450px;
@@ -39,6 +55,7 @@
 }
 
 .count{
+  padding-top: 5px;
   display: flex;
   width: 333px;
   

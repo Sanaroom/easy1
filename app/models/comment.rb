@@ -5,6 +5,8 @@ class Comment < ApplicationRecord
   end
 
   belongs_to :user
+  has_many :checks
+  
   
 
 end

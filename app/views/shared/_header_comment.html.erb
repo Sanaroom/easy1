@@ -7,7 +7,7 @@
 
     <div class="grade-class1">
       <% if user_signed_in? %>
-        <p>クラス： <%= current_user.grade_id %>年<%= current_user.class_id %>組</p>
+        <p>クラス : <%= current_user.grade_id %>年 <%= current_user.class_id %>組</p>
         <p> <%= current_user.name %>先生</p>
       <% end %>
     </div>

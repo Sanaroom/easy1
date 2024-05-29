@@ -18,6 +18,35 @@
   width: 400px;
   height: 800px;
 }
+
+
+
+
+.check-show-table {
+   width: 300px;
+   border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
+}
+
+.check-show-table th {
+  background-color: #f2f2f2; /* ヘッダーの背景色 */
+  border: 1px solid #000; /* セルの境界線 */
+  padding: 1px; /* セル内の余白 */
+  text-align: center; /* テキストの配置 */
+}
+
+.check-show-table  td {
+  border: 1px solid #000; /* セルの境界線 */
+  padding: 1px; /* セル内の余白 */
+  text-align: right; /* テキストの配置 */
+}
+
+
+      
+
+
+
+
+
 .comment-main{
   padding-left: 50px;
   
@@ -43,30 +72,41 @@
 
 .board-btn{
   font-size: 30px;
-  margin-left: 410px;
+  margin-left: 435px;
   border-radius: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 
+.comment-show{
+  padding-left: 110px;
+}
+
 .comment-table{
   width: 650px;
   border-collapse: collapse;
-  text-align: left; 
+  text-align: center; 
+  margin-top: 30px;
   
 }
 
 .comment-table th{
   background-color: #f2f2f2;
+  border: 1px solid #000; /* セルの境界線 */
+  padding: 3px; /* セル内の余白 */
+  text-align: center; /* テキストの配置 */
 }
-.comment-table th, td{
+.comment-table td{
   border: 1px solid #000; /* セルの境界線 */
   padding: 3px; /* セル内の余白 */
   text-align: left; /* テキストの配置 */
-  
+
 }
 
+.th1{
+  width: 400px;
+}
 
 
 

@@ -4,11 +4,11 @@
     <%= form_with model: @check, url:checks_path,local: true do |f| %>
         <div class='message1'>
           今日、わたしは、<br><br>
-          (<%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"check-number"}) %>
+          (<%= f.collection_select(:number_id, Number.all, :id, :name, {}, { include_blank: false, class:"check-number"}) %>
           番さん)<br><br>
          
           
-          <%= f.collection_select(:attendance_id, Attendance.all, :id, :name, {}, {class:"check-number"}) %>です。
+          <%= f.collection_select(:attendance_id, Attendance.all, :id, :name, { disabled: [2,3] ,selected:1 }, {class:"check-number"}) %>です。
           
         </div>
 

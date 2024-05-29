@@ -2,28 +2,8 @@
 
 <div class='show-main'>
   <div class="show-check">
-    <style>
-      table {
-        
-        width: 400px;
-        line-height: 13px;
-        border-collapse: collapse; /* テーブルセルの境界を結合し、線を表示 */
-      }
-
-      th, td {
-        border: 1px solid #000; /* セルの境界線 */
-        padding: 7px; /* セル内の余白 */
-        text-align: left; /* テキストの配置 */
-      }
-
-      th {
-        background-color: #f2f2f2; /* ヘッダーの背景色 */
-      }
-
-      
-    </style>
-
-    <table class='check-show-table'>
+    
+    <table class='check-show-table2'>
       <thead>
         <tr>
           <th>出席番号</th>
@@ -34,7 +14,7 @@
       <tbody>
         <% @checks.each do |check| %>
           <tr>
-            <td><%= check.number.name %></td>
+            <td ><%= check.number.name %></td>
             <td style="<%= 
               if check.attendance.name == '出席'
                 'background-color: #00FF00;' 

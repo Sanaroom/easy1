@@ -1,26 +1,28 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:edit,:update]
   #before_action :authenticate, only: [:index,:create,:edit, :update, :destroy]
-  
+  before_action :set_id
 
   
 
   def index
     @comments=Comment.order('created_at DESC')
     @comment=Comment.new
-    @checks = Check.order(:number_id)
-    @check_count = Check.count
+    @comments = current_user.comments
+    @checks = current_user.checks.order(:number_id)
+    @check_count =current_user.checks.count
+    
 
     @attendance_count1 = 0 
-    count = Check.where(attendance_id: 1).count
+    count = current_user.checks.where(attendance_id: 1).count
     @attendance_count1 += count
 
     @attendance_count2 = 0 
-    count = Check.where(attendance_id: 2).count
+    count = current_user.checks.where(attendance_id: 2).count
     @attendance_count2 += count
 
     @attendance_count3 = 0 
-    count = Check.where(attendance_id: 3).count
+    count = current_user.checks.where(attendance_id: 3).count
     @attendance_count3 += count
 
     
@@ -60,7 +62,7 @@ class CommentsController < ApplicationController
   def update
     comment=Comment.find(params[:id])
     comment.update(comment_params)
-    redirect_to check_path
+    redirect_to comments_path
     
   end
 
@@ -74,6 +76,10 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
+  def set_id
+    @checks = current_user.checks
+    @comments = current_user.comments
+  end
  
   
 end
