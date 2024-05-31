@@ -1,8 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:edit,:update]
-  #before_action :authenticate, only: [:index,:create,:edit, :update, :destroy]
   before_action :set_id
-
+  
   
 
   def index
@@ -80,6 +79,10 @@ class CommentsController < ApplicationController
     @checks = current_user.checks
     @comments = current_user.comments
   end
+
+ 
+    
+  
  
   
 end

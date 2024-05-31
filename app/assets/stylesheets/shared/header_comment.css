@@ -23,14 +23,14 @@
 }
 /*右上のリンク*/
 .child-content{
-  width: 110px;
+  width: 170px;
   text-align: center;
   text-decoration: none;
   padding: 10px;
   background-color: #81d2dd;
   border-bottom: 5px solid #54c5bf;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 15px;
   border-radius: 30px;
   margin-right: 20px;
   color: blue;

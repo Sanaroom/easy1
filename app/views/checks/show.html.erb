@@ -1,8 +1,23 @@
 <%= render "shared/header" %>
 
+
 <div class='show-main'>
-  <div class="show-check">
+  
     
+   
+  <div class='show-comment'>
+    <div class="teacher-comment">
+      ＜先生からのお知らせ＞
+    </div>
+    
+      <% @comments.each do |comment| %>
+        <p class="comment22"><%= comment.board %></p>
+      <% end %>
+    
+  </div>
+  
+
+  <div class="check20">
     <table class='check-show-table2'>
       <thead>
         <tr>
@@ -48,17 +63,6 @@
    
    
 
-  <%# 先生からのコメントの表示 %>
-  <div class='show-comment'>
-    <div class="teacher-comment">
-      ＜先生からのお知らせ＞
-    </div>
-    
-      <% @comments.each do |comment| %>
-        <p class="comment22"><%= comment.board %></p>
-      <% end %>
-    
-  </div>
-  <%# 先生からのコメントの表示 %>
+  
 
 </div>

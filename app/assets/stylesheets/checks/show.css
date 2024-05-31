@@ -1,18 +1,19 @@
 .show-main{
   width: 1500px;
   display: flex;
-  justify-content: space-around;
   background-color: rgb(238, 238, 201);
   margin-top: 30px;
-  background: url('show.jpg') no-repeat ;
+  background: url('show1.jpg') no-repeat ;
   background-size: cover; 
   background-position: center; 
   margin-top: 130px;
 }
 
-.show-check{
-  padding-top: 30px;
+.check20{
+  margin-left: 60px;
+  margin-top: 20px;
   font-weight: bold;
+  height: 900px;
 }
 
 .check-show-table2{
@@ -38,10 +39,16 @@
 }
 
 .show-comment{
-  height: 450px;
+  height: 400px;
   width: 650px;
   padding-top: 20px;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-left: 50px;
   font-size: 40px;
+  
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 30px;
 }
 
 
