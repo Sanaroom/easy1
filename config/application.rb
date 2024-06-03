@@ -10,9 +10,17 @@ module Easy1
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.time_zone = 'Tokyo'
-    config.active_record.default_timezone = :local
+    module YourAppName
+      class Application < Rails::Application
+        # 既存の設定
     
+        # タイムゾーンを日本時間に設定
+        config.time_zone = 'Tokyo'
+    
+        # デフォルトのタイムゾーンを有効にする（ActiveRecordのタイムゾーンも設定する場合）
+        config.active_record.default_timezone = :local
+      end
+    end
 
     # Configuration for the application, engines, and railties goes here.
     #
