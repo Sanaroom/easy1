@@ -1,5 +1,5 @@
 class ChecksController < ApplicationController
-  
+  before_action :set_time_zone
 
 
   def index
@@ -68,5 +68,9 @@ class ChecksController < ApplicationController
     params.require(:check).permit(:user_id,:number_id, :attendance_id).merge(user_id: current_user.id)
   end
 
+
+  def set_time_zone
+    Time.zone = 'Asia/Tokyo'
+  end
   
 end

@@ -32,3 +32,6 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+# 日本時間にあわせる
+set :default_env, { 'TZ' => 'Asia/Tokyo' }
