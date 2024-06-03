@@ -18,9 +18,10 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :output, "/path/to/my/cron_log.log"
 
-every :day, at: '0:00 am' do
-  runner "Check.delete_all"
+every :day, at: '12:00 am' do
+  rake "check:delete_old"
 end
 
 
