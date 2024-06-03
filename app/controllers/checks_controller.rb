@@ -1,4 +1,5 @@
 class ChecksController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_time_zone
 
 

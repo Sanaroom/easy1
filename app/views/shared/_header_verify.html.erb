@@ -13,28 +13,15 @@
   </div>
 
   <div class='date-contents'>
-    <p><%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
+    <p>今日は <%= l Date.today, format: "%-m月%-d日(%a)" %>です。</p>
     <p>現在時刻</p>
     <p class='clock' id="Clock"></p></p>
   </div>
 
-
-
   <div class='nav'>
     <ul class='list-nav'>
-      <% unless current_page?(checks_path) %>
-      <li class='child'>
-        <%#= link_to "みんなのページへ🍎", checks_path,class:"child-content",id:"sign-in1" %>
-      </li>
-      <% end %>
-      <li class='child'>
-        <%= link_to "先生のページへ🍌", verify_password_path, class:"child-content" ,id:"sign-in2" %>
-      </li>
+      <%= link_to "出欠一覧へ🥬", check_path(@checks),class:"child-content",id:"sign-in2" %>
     </ul>
   </div>
  
 </header>
-
-
-
-

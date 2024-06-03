@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_comment, only: [:edit,:update]
   before_action :set_id
+
+  before_action :verify_password, only: [:new, :create, :edit, :update, :destroy]
   
   
 
@@ -23,8 +26,24 @@ class CommentsController < ApplicationController
     @attendance_count3 = 0 
     count = current_user.checks.where(attendance_id: 3).count
     @attendance_count3 += count
+  end
 
-    
+  def new
+    @comment = Comment.new
+  end
+
+  def verify_password
+  end
+
+
+
+  def check_password
+    if current_user.valid_password?(params[:password])
+      session[:password_verified] = true
+      redirect_to comments_path
+    else
+      render :verify_password
+    end
   end
  
 
