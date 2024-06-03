@@ -34,6 +34,7 @@ Basic認証password：2222<br>
 今後は先生のページへ遷移する時に認証機能を取り入れる予定。
 
 # データベース設計
+[![Image from Gyazo](https://i.gyazo.com/a0b0a1aee3d5f6df37c6bfacdf94e6bf.png)](https://gyazo.com/a0b0a1aee3d5f6df37c6bfacdf94e6bf)
 
 # 画面遷移図
 
