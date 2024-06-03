@@ -8,12 +8,15 @@ class ChecksController < ApplicationController
 
   def new
     @check=Check.new
+    @available_numbers = Number.all.reject { |s| Check.where(user_id: current_user).pluck(:number_id).include?(s.id) }
   end
 
   def create
     @check=Check.create(check_params)
     if @check.save
-    redirect_to check_path(@check)
+      redirect_to check_path(@check)
+    else
+      @available_numbers = Number.all.reject{ |s| Check.where(user_id: current_user).pluck(:number_id).include?(s.id) }
     end
   end
 

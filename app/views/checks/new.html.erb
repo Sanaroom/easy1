@@ -4,7 +4,7 @@
     <%= form_with model: @check, url:checks_path,local: true do |f| %>
         <div class='message1'>
           今日、わたしは、<br><br>
-          (<%= f.collection_select(:number_id, Number.all, :id, :name, {}, { include_blank: false, class:"check-number"}) %>
+          (<%= f.collection_select(:number_id, @available_numbers, :id, :name, {}, { include_blank: false, class:"check-number"}) %>
           番さん)<br><br>
          
           
