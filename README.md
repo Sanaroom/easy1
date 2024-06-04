@@ -30,7 +30,9 @@ Basic認証password：2222<br>
 [要件定義シート](https://docs.google.com/spreadsheets/d/1hUh-3geFZLchCxnT-sy1QwdhB6ImfwUIJyIG5VutOl8/edit#gid=982722306)
 
 # 実装した機能
-・
+・ユーザー管理機能[![Image from Gyazo](https://i.gyazo.com/71797b8aa58bbc234a1ecc150c02ef37.gif)](https://gyazo.com/71797b8aa58bbc234a1ecc150c02ef37)<br>
+・出欠投稿機能<br>
+・コメント投稿機能
 
 # 実装予定の機能
 現在、宿題確認機能を実装中。<br>
