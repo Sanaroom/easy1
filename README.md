@@ -31,8 +31,8 @@ Basic認証password：2222<br>
 
 # 実装した機能
 ・ユーザー管理機能[![Image from Gyazo](https://i.gyazo.com/71797b8aa58bbc234a1ecc150c02ef37.gif)](https://gyazo.com/71797b8aa58bbc234a1ecc150c02ef37)<br>
-・出欠投稿機能<br>
-・コメント投稿機能
+・出欠投稿機能[![Image from Gyazo](https://i.gyazo.com/a2398411427e3fc033e249582279119d.gif)](https://gyazo.com/a2398411427e3fc033e249582279119d)<br>
+・コメント投稿機能[![Image from Gyazo](https://i.gyazo.com/8ca2095fc5dfcc0e432c9906e7db02de.gif)](https://gyazo.com/8ca2095fc5dfcc0e432c9906e7db02de)
 
 # 実装予定の機能
 現在、宿題確認機能を実装中。<br>
