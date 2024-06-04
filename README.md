@@ -29,6 +29,9 @@ Basic認証password：2222<br>
 # 洗い出した要件
 [要件定義シート](https://docs.google.com/spreadsheets/d/1hUh-3geFZLchCxnT-sy1QwdhB6ImfwUIJyIG5VutOl8/edit#gid=982722306)
 
+# 実装した機能
+・
+
 # 実装予定の機能
 現在、宿題確認機能を実装中。<br>
 今後は先生のページへ遷移する時に認証機能を取り入れる予定。
