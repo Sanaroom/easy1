@@ -48,6 +48,13 @@ class ChecksController < ApplicationController
     check=Check.find(params[:id])
     check.destroy
     redirect_to comments_path
+
+    def self.data_reset
+      user = User.find
+      user.checks.destroy_all
+      user.comments.destroy_all
+    end
+
   end
 
   def edit
