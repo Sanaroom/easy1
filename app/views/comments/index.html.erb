@@ -1,9 +1,8 @@
 <%= render "shared/header_comment" %>
 
 <div class="comment-2222">
-  <div class='show-main2'>
-    
 
+  <div class='show-main2'>
     <table class='check-show-table'>
       <thead>
         <tr>
@@ -30,7 +29,8 @@
               end
             %>"> <%= check.attendance.name %></td>
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
-            <td><%= link_to '編集', edit_check_path(check.id) %></td>
+            <td><%= link_to '編集', edit_check_path(check.id), id:"edit-button" %></td>
+              
             <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
           </tr>
         <% end %>

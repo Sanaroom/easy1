@@ -5,6 +5,7 @@ class ChecksController < ApplicationController
 
   def index
     @checks=Check.all
+    
   end
 
   def new
@@ -50,7 +51,6 @@ class ChecksController < ApplicationController
     redirect_to comments_path
 
     
-
   end
 
   def edit

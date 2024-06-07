@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
     @checks = current_user.checks.order(:number_id)
     @check_count =current_user.checks.count
     
+    
 
     @attendance_count1 = 0 
     count = current_user.checks.where(attendance_id: 1).count
@@ -60,9 +61,8 @@ class CommentsController < ApplicationController
 
 
   def destroy
-    comment = Comment.find(params[:id])
-
-    if comment.destroy
+    @comments = Comment.find(params[:id])
+    if @comments.destroy
       redirect_to comments_path
     end
 

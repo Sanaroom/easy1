@@ -1,6 +1,7 @@
 
 <%#コメント記入欄%>
-   <%= form_with(model: @comment, url:comment_path(@comment), local: true,method: :patch) do |f| %>
+
+    <%= form_with(model: @comment, url:comment_path(@comment), local: true,method: :patch) do |f| %>
       <div class='comment-messages'>
         <h1 class='comment1'>
           <%= f.text_area :board,  placeholder: "コメントする", class:"board-text", id:"board-text" %>
@@ -12,4 +13,13 @@
         
       </div>
     <%end%>
-  <%# 終わり %>
+
+ 
+    
+
+
+
+
+
+
+  

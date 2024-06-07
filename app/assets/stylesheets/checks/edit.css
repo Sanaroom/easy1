@@ -1,5 +1,4 @@
-
-.new-main{
+.new-main7{
   background: url('check.jpg') no-repeat ;
   background-size: 1000px; 
   background-position: center; 
@@ -9,7 +8,7 @@
   
 }
 
-.new-messages{
+.new-messages7{
   width: 1500px;
   height: 530px;
   background-color: white 0.5;
@@ -17,7 +16,7 @@
   
 }
 
-.message1{
+.message7{
   font-size: 50px;
   text-align: center;
   line-height: 30px;
@@ -25,22 +24,22 @@
   
 }
 
-.check-number{
+.check-number7{
   font-size: 30px;
   width: 90px;
   background-color: rgb(198, 235, 124);
 }
 
-.check-attendance{
+.check-attendance7{
   background-color: rgb(198, 235, 124);
 }
 
-.check_button{
+.check_button7{
   padding-left: 420px;
   padding-top: 50px;
 }
 
-.check-btn{
+.check-btn7{
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
@@ -51,5 +50,25 @@
   cursor: pointer;
   font-size: 40px;
   border-radius: 30px;
+}
+
+.hidden1 {
+  display: none;
+  
+}
+
+.popup {
+  display: none;
+}
+
+.popup.index {
+  display: block;
+  z-index: 50;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  position: fixed;
+  top: 50px;
+  left: 50px;
 }
 

@@ -4,8 +4,13 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth
 
   def after_sign_in_path_for(resource)
-    new_top_path
+    checks_path
   end
+
+  def after_sign_out_path_for(resource)
+    checks_path
+  end
+
 
  
 
