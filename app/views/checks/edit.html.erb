@@ -1,21 +1,25 @@
 
-<div class='new-main7 hidden1'>
-   <%= form_with(model: @check, url:check_path(@check),class:"form-class", id:"popup",local: true,method: :patch) do |f| %>
-  
-      <div class='new-messages7'>
-        <h1 class='message7'>
-          わたしは、<br><br>
-          (<%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"check-number7"}) %>
-          番さんは、)<br><br>
-          <%= f.collection_select(:attendance_id, Attendance.all, :id, :name, {}, {class:"check-number7"})   %>
-        </h1>
-        <div class="check_button7">
-          <%= f.submit "更新ボタン" ,class:"check-btn7", id:"submit-button" %>      
-        </div>
-      </div>
-    <%end%>
-</div>
 
-<div id="empty-div" style="display: none;">
-  <p>送信に成功しました!</p>
-</div>
+
+
+  <div class="new-main7 " id="popup">
+    <i class="far fa-times-circle new-main-close"></i>
+      <%= form_with(model: @check, url:check_path(@check),class:"form-class",local: true,method: :patch) do |f| %>
+        <div class='new-messages7'>
+          <h1 class='message7'>
+            わたしは、<br><br>
+            (<%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"check-number7"}) %>
+            番さんは、)<br><br>
+            <%= f.collection_select(:attendance_id, Attendance.all, :id, :name, {}, {class:"check-number7"})   %>
+          </h1>
+          <div class="check_button7">
+            <%= f.submit "更新ボタン" ,class:"check-btn7", id:"submit-button" %>      
+          </div>
+        </div>
+      <%end%>
+  </div>
+  <div class="maskEdit"></div>
+
+
+
+

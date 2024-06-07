@@ -3,6 +3,8 @@
 <div class="comment-2222">
 
   <div class='show-main2'>
+
+    
     <table class='check-show-table'>
       <thead>
         <tr>
@@ -11,6 +13,7 @@
           <th>登校時間</th>
           <th>編集</th>
           <th>削除</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -30,8 +33,10 @@
             %>"> <%= check.attendance.name %></td>
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
             <td><%= link_to '編集', edit_check_path(check.id), id:"edit-button" %></td>
-              
             <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
+
+            
+
           </tr>
         <% end %>
       </tbody>
@@ -47,6 +52,11 @@
         <p class="count3">遅刻：<%= @attendance_count3 %>人</p>
       </div>
     </div>
+
+
+
+    
+
   </div>
 
   <div class="comment-main">
@@ -58,9 +68,9 @@
     
 
     <div class="comment-show">
-      <div class="comment-title">
+      <h2 class="comment3">
           ＜コメント一覧＞
-      </div>
+      </h2>
 
       <table class="comment-table">
         <thead>
@@ -77,7 +87,7 @@
             <tr>
               <td><%= comment.board %></td>
               <td><%= comment.created_at.localtime.strftime("%H:%M") %></td>
-              <td><%= link_to '編集', edit_comment_path(comment.id),class:"td1" %></td>
+              <td><%= link_to '編集', edit_comment_path(comment.id),class:"edit-contents" %></td>
               <td> <%= link_to '削除', comment_path(comment.id), data: { turbo_method: :delete } %></td>
             </tr>
           <% end %>

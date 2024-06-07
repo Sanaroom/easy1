@@ -9,15 +9,29 @@
   border: 1px solid black;
   
   
+  
 }
 
 .show-main2{
   background-color: white;
-  padding-left: 40px;
+  padding-left: 50px;
   padding-top: 20px;
   width: 400px;
   height: 800px;
+  border: 2px solid rgb(153, 192, 250);
+  background-color: rgb(156, 241, 241);
+  border-radius: 30px;
+  margin-left: 130px;
 }
+
+
+
+.hidden1{
+  
+}
+
+
+
 
 
 
@@ -28,13 +42,14 @@
 }
 
 .check-show-table th {
-  background-color: #f2f2f2; /* ヘッダーの背景色 */
+  background-color: #f0e8e8; /* ヘッダーの背景色 */
   border: 1px solid #000; /* セルの境界線 */
   padding: 1px; /* セル内の余白 */
   text-align: center; /* テキストの配置 */
 }
 
 .check-show-table  td {
+  background-color: white;
   border: 1px solid #000; /* セルの境界線 */
   padding: 1px; /* セル内の余白 */
   text-align: right; /* テキストの配置 */
@@ -48,7 +63,8 @@
 
 
 .comment-main{
-  padding-left: 50px;
+  padding-left: 40px;
+  
   
 }
 
@@ -56,7 +72,9 @@
 .comment-messages{
   width: 800px;
   height: 250px;
-  background-color: white;
+  background-color: rgb(156, 241, 241);
+  border: 2px solid rgb(153, 192, 250);
+  border-radius: 30px;
 }
 
 .comment1{
@@ -80,7 +98,14 @@
 
 
 .comment-show{
-  padding-left: 110px;
+  padding-left: 70px;
+  
+}
+
+.comment3{
+  font-size: 30px;
+  padding-top:30px;
+  padding-left: 200px;
 }
 
 .comment-table{
@@ -88,11 +113,12 @@
   border-collapse: collapse;
   text-align: center; 
   margin-top: 30px;
+  background-color: rgb(183, 238, 238);
   
 }
 
 .comment-table th{
-  background-color: #f2f2f2;
+  background-color: #f0e8e8;
   border: 1px solid #000; /* セルの境界線 */
   padding: 3px; /* セル内の余白 */
   text-align: center; /* テキストの配置 */

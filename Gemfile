@@ -88,3 +88,5 @@ gem 'devise'
 
 gem 'whenever', require: false
 
+gem 'jquery-rails'
+

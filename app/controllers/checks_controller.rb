@@ -61,7 +61,7 @@ class ChecksController < ApplicationController
     @check=Check.find(params[:id])
     check=Check.find(params[:id])
     check.update(check_params)
-    redirect_to check_path
+    redirect_to comments_path
     
   end
 

@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     @checks = current_user.checks.order(:number_id)
     @check_count =current_user.checks.count
     
-    
+    @check = Check.all
 
     @attendance_count1 = 0 
     count = current_user.checks.where(attendance_id: 1).count
@@ -81,7 +81,6 @@ class CommentsController < ApplicationController
     comment=Comment.find(params[:id])
     comment.update(comment_params)
     redirect_to comments_path
-    
   end
 
   private
