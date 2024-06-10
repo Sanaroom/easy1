@@ -1,40 +1,29 @@
 .comment-2222{
   display: flex;
   margin-top: 130px;
+  width: 1500px;
+  display: flex;
+  margin-top: 30px;
+  background: url('commentimage.jpg') no-repeat ;
+  background-size: cover; 
+  background-position: center; 
+  margin-top: 130px;
 }
 
 .show-table{
   font-size: 20px;
   margin: 0 auto;
   border: 1px solid black;
-  
-  
-  
 }
 
 .show-main2{
-  background-color: white;
   padding-left: 50px;
   padding-top: 20px;
   width: 400px;
   height: 800px;
-  border: 2px solid rgb(153, 192, 250);
-  background-color: rgb(156, 241, 241);
   border-radius: 30px;
   margin-left: 130px;
 }
-
-
-
-.hidden1{
-  
-}
-
-
-
-
-
-
 
 .check-show-table {
    width: 300px;
@@ -55,25 +44,14 @@
   text-align: right; /* テキストの配置 */
 }
 
-
-      
-
-
-
-
-
 .comment-main{
   padding-left: 40px;
-  
-  
 }
 
 
 .comment-messages{
   width: 800px;
   height: 250px;
-  background-color: rgb(156, 241, 241);
-  border: 2px solid rgb(153, 192, 250);
   border-radius: 30px;
 }
 
@@ -86,7 +64,6 @@
 
 .comment1{
   text-align: center;
-  
 }
 
 .board-text{
@@ -126,7 +103,7 @@
   border-collapse: collapse;
   text-align: center; 
   margin-top: 30px;
-  background-color: rgb(183, 238, 238);
+  background-color: white;
   
 }
 
@@ -148,24 +125,9 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .comment-show{
   width: 800px;
   height: 400px;
-  background-color: white;
-  
 }
 
 .comment-title{

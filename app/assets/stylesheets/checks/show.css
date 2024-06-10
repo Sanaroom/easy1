@@ -60,7 +60,6 @@
 @keyframes wakuten{
   0% {border:2px solid yellow;}
 	100% {border: 2px solid lightgreen;}
-
 }
 
 
@@ -76,7 +75,6 @@
   padding-top: 5px;
   display: flex;
   width: 333px;
-  
 }
 
 .number-count{
@@ -114,12 +112,10 @@
   animation-delay: 0s;/*アニメーションの開始時間*/
   animation-iteration-count: infinite;/*繰り返す回数*/
   animation-direction: alternate;/*反転再生するかどうか*/
-  
 }
 
 @keyframes bb{
   0% {opacity:0%;}
 	100% {opacity:100%;}
-
 }
 
