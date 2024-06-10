@@ -15,6 +15,11 @@
   
 }
 
+.edit-pop{
+  top: 20px;
+  position: fixed;
+}
+
 .new-main-close {
   cursor: pointer;
   font-size: 4vw;
