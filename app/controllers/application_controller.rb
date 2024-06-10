@@ -12,10 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
 
- 
-
-
-
   private
 
   def configure_permitted_parameters

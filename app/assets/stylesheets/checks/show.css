@@ -47,12 +47,21 @@
   margin-left: 160px;
   font-size: 40px;
   background-color: rgba(255, 255, 255, 0.5);
-
-  
-  border: 2px solid rgba(0, 0, 0, 0.37);
+  border: 2px solid yellow;
   border-radius: 30px;
+  animation-name: wakuten;
+  animation-duration: 1s; /*アニメーション1回分の時間の長さ*/
+  animation-timing-function: ease-in-out;/*アニメーションの動き方*/
+  animation-delay: 0s;/*アニメーションの開始時間*/
+  animation-iteration-count: infinite;/*繰り返す回数*/
+  animation-direction: alternate;/*反転再生するかどうか*/
 }
 
+@keyframes wakuten{
+  0% {border:2px solid yellow;}
+	100% {border: 2px solid lightgreen;}
+
+}
 
 
 .teacher-comment{

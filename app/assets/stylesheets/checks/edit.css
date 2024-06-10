@@ -15,10 +15,24 @@
   
 }
 
-.edit-pop{
+.blink{
   top: 20px;
+  left: 20px;
   position: fixed;
+  animation-name: blinking; /*アニメーション名*/
+  animation-duration: 1s; /*アニメーション1回分の時間の長さ*/
+  animation-timing-function: ease-in-out;/*アニメーションの動き方*/
+  animation-delay: 0s;/*アニメーションの開始時間*/
+  animation-iteration-count: infinite;/*繰り返す回数*/
+  animation-direction: alternate;/*反転再生するかどうか*/
+  
 }
+
+@keyframes blinking {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
 
 .new-main-close {
   cursor: pointer;
