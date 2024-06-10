@@ -12,3 +12,5 @@ pin "tab3", to: "tab3.js"
 pin "school", to: "school.js"
 
 pin "comment-edit", to: "comment-edit.js"
+
+pin "clock", to: "clock.js"

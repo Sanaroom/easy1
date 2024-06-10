@@ -6,6 +6,7 @@ import "tab"
 import "tab2"
 import "tab3"
 import "school"
+import "clock"
 
 
 

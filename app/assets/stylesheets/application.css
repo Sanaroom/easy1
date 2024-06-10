@@ -10,5 +10,78 @@
 
 
 
+.container5 {
+  position: fixed;
+  top: 10px;
+  left: 480px;
+  margin: 0 auto;
+  width: 200px;
+}
 
+
+.edge-clock {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border: 2px dashed  black;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.clock-12 {
+  position: absolute;
+  top: 3%;
+  left: 40%;
+}
+
+.clock-3 {
+  position: absolute;
+  top: 43%;
+  left: 90%;
+}
+
+.clock-6 {
+  position: absolute;
+  top: 85%;
+  left: 47%;
+}
+
+.clock-9 {
+  position: absolute;
+  top: 43%;
+  left: 3%;
+}
+
+.clock-hour {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 5px);
+  width: 4px;
+  height: 40px;
+  background: black;
+  transform-origin: bottom;
+  transform: rotate(90deg);
+}
+
+.clock-min {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 2px);
+  width: 3px;
+  height: 50px;
+  background: black;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+}
+
+.clock-sec {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 1px);
+  width: 1px;
+  height: 50px;
+  background: navy;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+}
 
