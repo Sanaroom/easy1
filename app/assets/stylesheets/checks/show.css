@@ -95,3 +95,28 @@
   background-color: skyblue;
 }
 
+.aa{
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.bb{
+  margin-left: 10px;
+  background-color: yellow;
+  border: 2px solid red;
+  animation-name: bb;
+  animation-duration: 1s; /*アニメーション1回分の時間の長さ*/
+  animation-timing-function: ease-in-out;/*アニメーションの動き方*/
+  animation-delay: 0s;/*アニメーションの開始時間*/
+  animation-iteration-count: infinite;/*繰り返す回数*/
+  animation-direction: alternate;/*反転再生するかどうか*/
+  
+}
+
+@keyframes bb{
+  0% {opacity:0%;}
+	100% {opacity:100%;}
+
+}
+

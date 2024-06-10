@@ -14,14 +14,15 @@
     </div>
   </div>
 
+  
+
   <div class='date-contents'>
+    
     <% date = Date.today %>
     <% jp_day = %w(日 月 火 水 木 金 土)[date.wday] %>
     今日は<span class="date1"> <%= date.strftime("%-m月%-d日(#{jp_day})") %></span>です。
     
     
-    
-    <p class='clock' id="Clock"></p></p>
   </div>
 
   <div class='nav'>

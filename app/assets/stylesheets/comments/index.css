@@ -77,6 +77,13 @@
   border-radius: 30px;
 }
 
+.comment-messages-edit{
+  text-align: center;
+  padding-top: 130px;
+}
+
+
+
 .comment1{
   text-align: center;
   
@@ -85,6 +92,12 @@
 .board-text{
   font-size: 50px;
   margin-top: 40px;
+}
+
+.board-text-edit{
+  font-size: 50px;
+  margin-top: 40px;
+  border: 2px solid black;
 }
 
 

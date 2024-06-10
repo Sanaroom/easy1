@@ -21,7 +21,7 @@
 set :output, "/path/to/my/cron_log.log"
 
 every :day, at: '12:00 am' do
-  rake "check:delete_old"
+  rake "delete:checks"
 end
 
 

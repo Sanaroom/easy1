@@ -18,36 +18,41 @@
   
 
   <div class="check20">
-    <table class='check-show-table2'>
-      <thead>
-        <tr>
-          <th>出席番号</th>
-          <th>出席確認</th>
-          <th>登校時間</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @checks.each do |check| %>
+    <div class="aa">
+      <table class='check-show-table2'>
+        <thead>
           <tr>
-            <td ><%= check.number.name %></td>
-            <td style="<%= 
-              if check.attendance.name == '出席'
-                'background-color: #00FF00;' 
-              elsif check.attendance.name == '欠席'
-                'background-color: rgb(235, 163, 135);'
-              elsif check.attendance.name == '遅刻'
-                'background-color: skyblue;'
-              else
-                ''
-              end
-            %>"> <%= check.attendance.name %></td>
-            
-
-            <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
+            <th>出席番号</th>
+            <th>出席確認</th>
+            <th>登校時間</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @checks.each do |check| %>
+            <tr>
+              <td ><%= check.number.name %></td>
+              <td style="<%= 
+                if check.attendance.name == '出席'
+                  'background-color: #00FF00;' 
+                elsif check.attendance.name == '欠席'
+                  'background-color: rgb(235, 163, 135);'
+                elsif check.attendance.name == '遅刻'
+                  'background-color: skyblue;'
+                else
+                  ''
+                end
+              %>"> <%= check.attendance.name %></td>
+              
+
+              <td><%= check.created_at.localtime.strftime("%-H:%M") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="bb">
+        ← new
+      </div>
+    </div>
 
     <div class="count">
       <div class="number-count">
