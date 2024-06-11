@@ -67,9 +67,16 @@
 }
 
 .board-text{
-  font-size: 50px;
+  font-size: 40px;
   margin-top: 40px;
+  width: 600px;
+  height: 200px;
 }
+
+.commentSelect{
+  margin-left: 130px;
+}
+
 
 .board-text-edit{
   font-size: 50px;
@@ -81,6 +88,7 @@
 .board-btn{
   font-size: 30px;
   margin-left: 435px;
+  margin-top: 10px;
   border-radius: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -89,7 +97,7 @@
 
 .comment-show{
   padding-left: 70px;
-  
+  margin-top: 60px;
 }
 
 .comment3{

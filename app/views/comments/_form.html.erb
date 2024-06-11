@@ -1,8 +1,21 @@
     <%= form_with(model: @comment, url:comments_path, local: true) do |f| %>
       <div class='comment-messages'>
+        
         <h1 class='comment1'>
           <%= f.text_area :board,  placeholder: "コメントする", class:"board-text", id:"board-text" %>
         </h1>
+
+        <select class="commentSelect" id="commentSelect">
+          <option value="">--選択も可--</option>
+          <option value="おはよう！">おはよう！</option>
+          <option value="おはようございます！">おはようございます！</option>
+          <option value="朝から全校朝会があります">朝から全校朝会があります。</option>
+          <option value="朝の会が始めるまでに体操服に着替えておきましょう。">朝の会が始めるまでに体操服に着替えておきましょう。</option>
+          <option value="水泳カードを出し忘れないようにしましょう。">水泳カードを出し忘れないようにしましょう。</option>
+          <!-- 必要に応じて他のoptionを追加 -->
+        </select>
+
+        
 
         <div class="board_button">
           <%= f.submit "新しく作成する" ,class:"board-btn" %>      

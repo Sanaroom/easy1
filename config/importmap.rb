@@ -14,3 +14,5 @@ pin "school", to: "school.js"
 pin "comment-edit", to: "comment-edit.js"
 
 pin "clock", to: "clock.js"
+
+pin "board", to: "board.js"
