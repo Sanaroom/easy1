@@ -4,8 +4,8 @@ function getElements() {
   const minute = time.getMinutes();
   const second = time.getSeconds();
 
-  const degreeHour = hour / 12 * 360;
-  const degreeMin = minute / 60 * 360;
+  const degreeHour = (hour / 12 * 360)+(minute /60) * 30;
+  const degreeMin = (minute / 60 * 360)+(second / 60) * 6;
   const degreeSec = second / 60 * 360;
 
   const clockHour = document.getElementsByClassName('clock-hour')[0];
