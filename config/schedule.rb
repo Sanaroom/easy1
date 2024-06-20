@@ -20,7 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 set :output, "/path/to/my/cron_log.log"
 
-every 1.day, at: '0:00 am' do
+every 1.day, at: '12:00 am' do
   rake "checks:clean_up"
 end
 
