@@ -49,8 +49,11 @@ class ChecksController < ApplicationController
     check=Check.find(params[:id])
     check.destroy
     redirect_to comments_path
+  end
 
-    
+  def delete_all
+    Check.delete_all
+    redirect_to comments_path
   end
 
   def edit

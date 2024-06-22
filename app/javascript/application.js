@@ -8,6 +8,7 @@ import "tab3"
 import "school"
 import "clock"
 import "board"
+import "delete_message"
 
 
 

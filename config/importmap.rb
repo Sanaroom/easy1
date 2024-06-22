@@ -16,3 +16,5 @@ pin "comment-edit", to: "comment-edit.js"
 pin "clock", to: "clock.js"
 
 pin "board", to: "board.js"
+
+pin "delete_message", to: "delete_message.js"

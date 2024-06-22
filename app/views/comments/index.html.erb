@@ -12,8 +12,8 @@
           <th>出席確認</th>
           <th>登校時間</th>
           <th>編集</th>
-          <th>削除</th>
-          
+          <th id="d-button"><%= link_to '削除', delete_all_checks_path, data: { turbo_method: :delete } %></th>
+
         </tr>
       </thead>
       <tbody>
@@ -34,13 +34,16 @@
             <td><%= check.created_at.localtime.strftime("%H:%M") %></td>
             <td><%= link_to '編集', edit_check_path(check.id), id:"edit-button" %></td>
             <td><%= link_to '削除', check_path(check.id), data: { turbo_method: :delete } %></td>
-
-            
-
           </tr>
         <% end %>
       </tbody>
     </table>
+
+    <div id="delete_message" style="display:none;">
+      ☜一括で削除
+    </div>
+
+
 
     <div class="count">
       <div class="number-count">
@@ -52,11 +55,6 @@
         <p class="count3">遅刻：<%= @attendance_count3 %>人</p>
       </div>
     </div>
-
-
-
-    
-
   </div>
 
   <div class="comment-main">
@@ -78,7 +76,7 @@
             <th class="th1">コメント</th>
             <th>日時</th>
             <th>編集</th>
-            <th>削除</th>
+            <th id="d-button2"><%= link_to '削除', delete_all_comments_path, data: { turbo_method: :delete } %></th>
             <!-- 必要な列を追加 -->
           </tr>
         </thead>
@@ -93,6 +91,9 @@
           <% end %>
         </tbody>
       </table>
+      <div id="delete_message2" style="display:none;">
+        ☜一括で削除
+      </div>
     </div>
   </div>
 </div>

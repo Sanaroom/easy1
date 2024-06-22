@@ -72,6 +72,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def delete_all
+    Comment.delete_all
+    redirect_to comments_path
+  end
+
 
 
   def edit
