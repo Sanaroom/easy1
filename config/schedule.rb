@@ -18,7 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+env :PATH, ENV['PATH']
 set :output, "/path/to/my/cron_log.log"
+set :environment, :production
 
 every 1.day, at: '12:00 am' do
   rake "checks:clean_up"
