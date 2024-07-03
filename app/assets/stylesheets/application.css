@@ -58,7 +58,7 @@
   left: calc(50% - 5px);
   width: 4px;
   height: 40px;
-  background: black;
+  background: rgb(221, 1, 1);
   transform-origin: bottom;
   transform: rotate(90deg);
 }
